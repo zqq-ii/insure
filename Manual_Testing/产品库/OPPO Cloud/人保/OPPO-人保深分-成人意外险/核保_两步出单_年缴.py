@@ -30,9 +30,9 @@ class JKX_underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "RB2023030801",  # 计划代码;
-                    "IssueDate": Time(),  # 出单时间      (注:不可倒签)
-                    "EffectiveDate": Tomorrow(3),  # 生效时间
-                    "ExpireDate": SeveralYears(day=3),  # 失效时间
+                    "IssueDate": "20240226101318",  # 出单时间      (注:可倒签)
+                    "EffectiveDate": "20240229000000",  # 生效时间
+                    "ExpireDate": "20250227235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -48,7 +48,7 @@ class JKX_underwriting:
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
-                    "PHIdNumber": "52038119980107274X",  # 证件号/企业编号
+                    "PHIdNumber": "532523199801079133",  # 证件号/企业编号
                     "PHBirthDate": "19980107000000",  # 出生日期 投保类型为2不传
                     "PHTelephone": "13410506136",  # 手机号 投保类型为2非必传
                     "PHEmail": None,  # 邮箱
@@ -62,7 +62,7 @@ class JKX_underwriting:
                         "InsuredType": None,  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",  # 证件类型(参考附录 证件类型（个人）)投保类型为2不传
-                        "IdNumber": "52038119980107274X",  # 证件号/企业编号
+                        "IdNumber": "532523199801079133",  # 证件号/企业编号
                         "BirthDate": "19980107000000",  # 出生日期 投保类型为2非必传
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱

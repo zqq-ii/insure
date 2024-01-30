@@ -299,4 +299,4 @@ if __name__ == '__main__':
     for i in range(10):
         print(newIdNum(1998, 1, 7, "男"))  # 随机生成身份证
 
-    # print(Time(),Tomorrow(8),SeveralYears(day=8))
+    # print(Time(),Tomorrow(),SeveralYears(day=30))

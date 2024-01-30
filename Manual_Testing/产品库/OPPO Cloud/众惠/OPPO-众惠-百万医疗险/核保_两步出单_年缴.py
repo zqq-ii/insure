@@ -28,13 +28,13 @@ class JKX_underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZH2023110901",  # 计划代码;
-                    "IssueDate": Time(),  # 出单时间      (注:不可倒签)
+                    "IssueDate": Time(),  # 出单时间      (注:可倒签)
                     "EffectiveDate": Tomorrow(day=1),  # 生效时间
                     "ExpireDate": SeveralYears(day=1),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "628.80",  # 总保费
+                    "TotalPremium": "806.40",  # 总保费
                     "FaceAmount": "6000000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和  (保额不校验)
                     "InstallmentNumber": None,  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]

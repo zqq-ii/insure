@@ -30,7 +30,7 @@ class JKX_underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "RB2023030802",  # 计划代码;
-                    "IssueDate": Time(),  # 出单时间      (注:不可倒签)
+                    "IssueDate": Time(),  # 出单时间      (注:可倒签)
                     "EffectiveDate": Tomorrow(3),  # 生效时间
                     "ExpireDate": SeveralYears(day=3),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
