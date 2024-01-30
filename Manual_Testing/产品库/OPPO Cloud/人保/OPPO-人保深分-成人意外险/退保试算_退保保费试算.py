@@ -22,7 +22,7 @@ class Surrender_trial:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PLDO20234403Q000H11823",  # 保单号
+                "PolicyRef": "PLDO20244403Q000E10023",  # 保单号
                 "CancelDate": Time(),  # 退保申请日期
                 "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
             },

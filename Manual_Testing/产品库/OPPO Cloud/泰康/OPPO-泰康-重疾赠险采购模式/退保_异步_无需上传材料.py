@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -26,7 +26,7 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "6H2405DA5Y1K0C6",  # 保单号
+                "PolicyRef": "6H2405DA6AK9916",  # 保单号
                 "CancelDate": Time(),  # 退保申请时间
                 "RefundPremium": "0.00",  # 退保金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
@@ -45,3 +45,4 @@ if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Synchronous_surrender().Synchronous_surrender()
     print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+
