@@ -22,7 +22,7 @@ class Release_Notice:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PWCB20234403Q000E00101",  # 保单号
+                "PolicyRef": "PWCB20244403Q000E11066",  # 保单号
                 "EndorDate": Time(),  # 脱保日期
                 "EndorReason": None  # 脱保原因 (阳光百万医疗(计划码YG2021010701，YG2021010702)非必填,其余产品必填)
             },

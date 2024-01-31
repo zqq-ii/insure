@@ -28,7 +28,7 @@ class Renew_insurance:
         body = {
             "Data": {
                 "Policy": {
-                    "OriginalPolicyRef": "PWCB20234403Q000L00010",  # 原保单号
+                    "OriginalPolicyRef": "PWCB20244403Q000E11065",  # 原保单号
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "RB2022082501",  # 续保计划码
                     "IssueDate": Time(),  # 出单时间      (注:不可倒签)
@@ -46,7 +46,7 @@ class Renew_insurance:
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
                     "PolicyHolderName": "斜刘海",  # 用户姓名
                     "PHIdType": "01",# 证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
-                    "PHIdNumber": "532900199801076802",  # 证件号
+                    "PHIdNumber": "210421199801074354",  # 证件号
                     "PHBirthDate": "19980107000000",  # 出生日期
                     "PHTelephone": "13410506136",  # 手机号
                     "SocialSecurityFlag": "0"  # 有无社保 (0无1有)
@@ -59,7 +59,7 @@ class Renew_insurance:
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",
                         # 证件类型证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
-                        "IdNumber": "532900199801076802",  # 证件号
+                        "IdNumber": "210421199801074354",  # 证件号
                         "BirthDate": "19980107000000",  # 出生日期
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "PolicyholderInsuredRelation": "01",  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传

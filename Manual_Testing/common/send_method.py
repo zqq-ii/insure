@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 import requests, json
 from Manual_Testing.common.encryption_decryption import EncryptDate
+from Manual_Testing.common.RandomNumber import JsonFormatting
 
 
 class SendMethod:
@@ -60,21 +61,21 @@ class SendMethod:
     def AesEcb_post(key, url, body, headers):
         try:
             aes = EncryptDate(key)
-            Body = aes.encrypt(json.dumps(body, ensure_ascii=False))
+            Body = aes.encrypt(JsonFormatting(body))
             response = requests.post(url=url, json=Body, headers=headers)
             result = {}
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
             if response.status_code == 200:
                 result["ResponseBody"] = json.loads(aes.decrypt(response.text))
-                return json.dumps(result, indent=4, ensure_ascii=False, separators=(',', ': '))
+                return JsonFormatting(result)
             else:
                 try:
                     result["ResponseBody"] = json.loads(response.text)
-                    return json.dumps(result, indent=4, ensure_ascii=False, separators=(',', ': '))
+                    return JsonFormatting(result)
                 except:
                     result["ResponseBody"] = response.text
-                    return json.dumps(result, indent=4, ensure_ascii=False, separators=(',', ': '))
+                    return JsonFormatting(result)
         except:
             return None
 

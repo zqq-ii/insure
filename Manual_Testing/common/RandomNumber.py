@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 from Manual_Testing.common import RandomData
-import time, datetime, random, string
+import time, datetime, random, string, json
 from dateutil.relativedelta import relativedelta
 
 
@@ -60,6 +60,15 @@ def CustomRandomStr(custom="ZDY", length=13):
     """
     random_str = ''.join(random.sample(string.ascii_letters + string.digits, length))
     return str(custom) + random_str
+
+
+def JsonFormatting(FormattingJson):
+    """
+    Json格式化
+    ensure_ascii默认是True会将中文变为unicode编码
+    """
+    JsonFormatting = json.dumps(FormattingJson, indent=4, ensure_ascii=False, separators=(',', ': '))
+    return JsonFormatting
 
 
 def newIdNum(year=random.randint(1974, 2001), month=random.randint(1, 12), day=random.randint(1, 29), sex=None):

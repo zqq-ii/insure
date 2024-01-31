@@ -22,8 +22,8 @@ class Payment_refund:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "v1tbqUvtURZuu2KG",  # 第三方渠道公司保单号码或者第三方渠道公司订单号码
-                "PolicyRef": "IH1100014637458196",  # 保单号
+                "AgencyPolicyRef": "RyfXefhiXESkrjHr",  # 第三方渠道公司保单号码或者第三方渠道公司订单号码
+                "PolicyRef": "IH1100014646365901",  # 保单号
                 "InstallmentNo": "1",  # 分期号(兼容资金安全险非必填),非分期产品默认为第一期
                 "TotalPremium": "67.50",  # 保费，分期产品为对应期数保费
                 "Currency": "CNY",  # 币别

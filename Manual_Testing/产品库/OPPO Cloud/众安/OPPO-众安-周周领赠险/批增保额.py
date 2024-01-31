@@ -32,7 +32,7 @@ class Increase_coverage:
                         "CorrectEffectiveDate": Tomorrow()  # 批单生效时间，T+1零点生效
                     },
                     "PlanCode": "ZAN2021070704",  # 计划代码
-                    "PolicyRef": "IH1100512417823402"  # 保单号
+                    "PolicyRef": "IH1100014646369415"  # 保单号
                 }
             },
             "ChannelCode": self.ChannelCode,

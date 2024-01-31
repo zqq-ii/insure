@@ -22,7 +22,7 @@ class Query_coverage:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "IH1100512417823402"  # 保单号
+                "PolicyNo": "IH1100014646369415"  # 保单号
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),

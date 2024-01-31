@@ -22,7 +22,7 @@ class Synchronize_logout:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "IH1100512020471053",  # 保单号
+                "PolicyRef": "IH1100014646365901",  # 保单号
                 "CancelDate": Time(),  # 注销申请时间
                 "RefundPremium": None,  # 注销金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种

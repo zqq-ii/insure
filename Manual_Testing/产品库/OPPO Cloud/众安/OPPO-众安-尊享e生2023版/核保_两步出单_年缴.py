@@ -28,13 +28,13 @@ class JKX_underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZAN2022122701",  # 计划代码;
-                    "IssueDate": "20231123235959",  # 出单时间      (注:可倒签)
-                    "EffectiveDate": "20231124000000",  # 生效时间
-                    "ExpireDate": "20241123235959",  # 失效时间
+                    "IssueDate": "20221123235959",  # 出单时间      (注:可倒签)
+                    "EffectiveDate": "20221124000000",  # 生效时间
+                    "ExpireDate": "20231123235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "1279.0",  # 总保费
+                    "TotalPremium": "920.0",  # 总保费
                     "FaceAmount": "6000000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": None,  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]

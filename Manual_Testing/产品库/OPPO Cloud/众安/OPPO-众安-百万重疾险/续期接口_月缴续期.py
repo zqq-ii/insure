@@ -26,9 +26,9 @@ class Renewal:
                 "Currency": "CNY",  # 币别
                 "PaymentMethod": "2",  # 支付方式：1-支付宝；2-微信支付；3-通联支付；4-快钱支付
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水号（第三方支付流水号）
-                "InstallmentNo": "2",  # 分期数整数(第几期)
+                "InstallmentNo": "12",  # 分期数整数(第几期)
                 "InstallmentPremium": "67.50",  # 分期产品，期次保费
-                "OriginalPolicyRef": "IH1100512025273113"  # 需要续期的保单号码
+                "OriginalPolicyRef": "IH1100014646365901"  # 需要续期的保单号码
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
