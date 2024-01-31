@@ -240,7 +240,11 @@ def SeveralMonths(day=1, month=1):
 
 
 def SeveralYears(day=1, year=1):
-    """距今某年后最后一天截止时间;可用于保单失效期"""
+    """
+    (距今某年后最后某天截止时间;可用于保单失效期)
+    1,注意失效时间如果在2月份,2月小于29天时传入的最大天数为29;
+    2,例:T+30场景,失效在2月该2月最大28天,那么这里传入的应该就是29
+    """
     date = (datetime.datetime.now() - datetime.timedelta(days=-day))
     new_date = (date - datetime.timedelta(days=+1)).strftime('%Y%m%d235959')
     timeArray = time.strptime(new_date, "%Y%m%d%H%M%S")
