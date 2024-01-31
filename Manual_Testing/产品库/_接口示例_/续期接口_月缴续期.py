@@ -43,4 +43,4 @@ class Renewal:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Renewal().Renewal()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

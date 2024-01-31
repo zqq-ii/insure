@@ -149,6 +149,6 @@ class Joint_Investment:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Joint_Investment().Joint_Investment()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')
 
 

@@ -59,4 +59,4 @@ if __name__ == "__main__":
     sys.stdout = Logger()
     RandomZ = RandomStr().create()
     Res = Invoice_application().Invoice_application()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

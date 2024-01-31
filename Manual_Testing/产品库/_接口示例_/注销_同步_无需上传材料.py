@@ -40,4 +40,4 @@ class Synchronize_logout:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Synchronize_logout().Synchronize_logout()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

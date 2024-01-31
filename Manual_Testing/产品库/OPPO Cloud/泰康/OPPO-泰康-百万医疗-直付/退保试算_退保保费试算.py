@@ -37,4 +37,4 @@ class Surrender_trial:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Surrender_trial().Surrender_trial()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

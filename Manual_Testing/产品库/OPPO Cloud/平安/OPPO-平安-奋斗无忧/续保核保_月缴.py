@@ -85,4 +85,4 @@ class Renew_insurance:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Renew_insurance().Renew_insurance()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

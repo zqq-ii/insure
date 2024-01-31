@@ -90,4 +90,4 @@ class One_order:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = (One_order().One_order())
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

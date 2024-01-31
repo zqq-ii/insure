@@ -46,4 +46,4 @@ class Increase_coverage:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Increase_coverage().Increase_coverage()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

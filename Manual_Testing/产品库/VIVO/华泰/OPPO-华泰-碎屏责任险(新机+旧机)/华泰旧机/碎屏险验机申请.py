@@ -42,4 +42,4 @@ class Machine_inspection_application:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Machine_inspection_application().Machine_inspection_application()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

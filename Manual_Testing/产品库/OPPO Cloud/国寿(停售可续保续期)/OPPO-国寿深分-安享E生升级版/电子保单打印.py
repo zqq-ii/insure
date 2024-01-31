@@ -36,4 +36,4 @@ class Policy_printing:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Policy_printing().Policy_printing()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

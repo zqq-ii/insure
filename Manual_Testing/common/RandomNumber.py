@@ -195,7 +195,7 @@ def CreditCode():
 
 def Execution_Time():
     """用于打印程序执行时间"""
-    Time = datetime.datetime.now().strftime('%Y-%m-%d,%H:%M:%S')  # 获取当前时间
+    Time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # 获取当前时间
     return Time
 
 

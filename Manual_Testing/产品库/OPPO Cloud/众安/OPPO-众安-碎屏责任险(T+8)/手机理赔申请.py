@@ -54,4 +54,4 @@ class Claim_application:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Claim_application().Claim_application()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

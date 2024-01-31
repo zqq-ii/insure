@@ -45,4 +45,4 @@ class Grading_upgrading:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Grading_upgrading().Grading_upgrading()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

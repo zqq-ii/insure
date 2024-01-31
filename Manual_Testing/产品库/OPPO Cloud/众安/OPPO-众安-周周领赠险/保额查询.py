@@ -35,4 +35,4 @@ class Query_coverage:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Query_coverage().Query_coverage()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

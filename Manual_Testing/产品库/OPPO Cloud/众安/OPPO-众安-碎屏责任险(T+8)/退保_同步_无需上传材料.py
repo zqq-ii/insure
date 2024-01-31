@@ -40,4 +40,4 @@ class Synchronous_surrender:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Synchronous_surrender().Synchronous_surrender()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

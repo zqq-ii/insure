@@ -98,4 +98,4 @@ class JKX_underwriting:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = JKX_underwriting().JKX_underwriting()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

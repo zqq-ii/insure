@@ -62,4 +62,4 @@ class Freight_claims:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = (Freight_claims().Freight_claims())
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

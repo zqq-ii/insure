@@ -42,4 +42,4 @@ class Zh_Underwriting:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Zh_Underwriting().Zh_Underwriting()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

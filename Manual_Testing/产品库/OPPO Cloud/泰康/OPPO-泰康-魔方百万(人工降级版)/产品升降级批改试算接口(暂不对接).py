@@ -38,4 +38,4 @@ class Grading_upgrading_Trial:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Grading_upgrading_Trial().Grading_upgrading_Trial()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

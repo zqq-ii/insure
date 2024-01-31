@@ -38,4 +38,4 @@ class IMEI_correction:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = IMEI_correction().IMEI_correction()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

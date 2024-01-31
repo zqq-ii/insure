@@ -43,4 +43,4 @@ class Pure_contract_link:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Pure_contract_link().Pure_contract_link()
-    print(f'[Execution_Time:{Execution_Time()}]\n{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')
