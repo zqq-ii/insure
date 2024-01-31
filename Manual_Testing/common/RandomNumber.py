@@ -65,8 +65,7 @@ def CustomRandomStr(custom="ZDY", length=13):
 def JsonFormatting(FormattingJson):
     """
     Json格式化
-    ensure_ascii默认是True会将中文变为unicode编码
-    """
+    """  # ensure_ascii默认是True会将中文变为unicode编码
     JsonFormatting = json.dumps(FormattingJson, indent=4, ensure_ascii=False, separators=(',', ': '))
     return JsonFormatting
 
