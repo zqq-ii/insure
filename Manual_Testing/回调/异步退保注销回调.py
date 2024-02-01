@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -94,4 +94,4 @@ class Refund_sales:
 if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Refund_sales().Refund_sales()
-    print(f'time:{Time()}丨{Res}')
+    print(f'[{Execution_Time()}]\n{Res}')

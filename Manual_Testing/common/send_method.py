@@ -13,7 +13,7 @@ class SendMethod:
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
             result["ResponseBody"] = response.json()
-            return result
+            return JsonFormatting(result)
         except:
             result = None
             return result
@@ -26,7 +26,7 @@ class SendMethod:
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
             result["ResponseBody"] = response.json()
-            return result
+            return JsonFormatting(result)
         except:
             result = None
             return result
@@ -39,7 +39,7 @@ class SendMethod:
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
             result["ResponseBody"] = response.json()
-            return result
+            return JsonFormatting(result)
         except:
             result = None
             return result
@@ -52,7 +52,7 @@ class SendMethod:
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
             result["ResponseBody"] = response.text
-            return result
+            return JsonFormatting(result)
         except:
             result = None
             return result
@@ -77,7 +77,8 @@ class SendMethod:
                     result["ResponseBody"] = response.text
                     return JsonFormatting(result)
         except:
-            return None
+            result = None
+            return result
 
 
 if __name__ == '__main__':
