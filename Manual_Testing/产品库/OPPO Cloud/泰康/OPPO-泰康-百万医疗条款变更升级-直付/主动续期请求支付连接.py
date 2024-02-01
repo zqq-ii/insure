@@ -22,9 +22,9 @@ class Renewal_payment_link:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H240123000357200108292",  # 保单号
+                "PolicyRef": "H240201062610090108292",  # 保单号
                 "PayMethod": "WECHAT",  # 支付方式：微信支付 - WECHAT，支付宝支付 - ALI
-                "Amount": "963.6",  # 支付金额，分期保费之和
+                "Amount": "87.60",  # 支付金额，分期保费之和
                 "PayPlatformType": "WAP",  # 支付平台类型：PC - PC端支付（返回一个二维码页面，只能在pc端打开，用户扫码支付） WAP—WAP端支付(浏览器打开，拉起微信或支付宝支付)
                 "SuccessUrl": "https://www.taikang.com/",  # 签约成功跳转链接
                 "FailUrl": "https://www.taikang.com/",  # 支付失败跳转链接（泰康重疾险直付产品必传）
@@ -33,45 +33,45 @@ class Renewal_payment_link:
                         "InstallmentNo": "2",  # 分期号
                         "InstallmentPremium": "87.60"  # 分期保费
                     },
-                    {
-                        "InstallmentNo": "3",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "4",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "5",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "6",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "7",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "8",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "9",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    }, {
-                        "InstallmentNo": "10",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "11",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    },
-                    {
-                        "InstallmentNo": "12",  # 分期号
-                        "InstallmentPremium": "87.60"  # 分期保费
-                    }
+                    # {
+                    #     "InstallmentNo": "3",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "4",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "5",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "6",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "7",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "8",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "9",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # }, {
+                    #     "InstallmentNo": "10",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "11",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # },
+                    # {
+                    #     "InstallmentNo": "12",  # 分期号
+                    #     "InstallmentPremium": "87.60"  # 分期保费
+                    # }
                 ]
             },
 

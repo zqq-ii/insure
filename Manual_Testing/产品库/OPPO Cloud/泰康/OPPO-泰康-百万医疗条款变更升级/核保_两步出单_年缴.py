@@ -31,8 +31,8 @@ class JKX_underwriting:
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TK2024011701",  # 计划代码
                     "IssueDate": Time(),  # 出单时间
-                    "EffectiveDate": Tomorrow(30),  # 生效时间
-                    "ExpireDate": SeveralYears(day=29),  # 失效时间     # 注(保单未失效,续保前需要现在数据库修改有效期后再续保)
+                    "EffectiveDate": Tomorrow(),  # 生效时间
+                    "ExpireDate": SeveralYears(),  # 失效时间     # 注(保单未失效,续保前需要现在数据库修改有效期后再续保)
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴

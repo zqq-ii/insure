@@ -22,9 +22,9 @@ class Synchronize_logout:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H240122000351360129758",  # 保单号
+                "PolicyRef": "H240131062057060129758",  # 保单号
                 "CancelDate": Time(),  # 注销申请时间
-                "RefundPremium": "87.60",  # 注销金额（不一定等于实际退费金额）
+                "RefundPremium": "106.80",  # 注销金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
                 "Type": "NORMAL",  # 注销类型： 正常注销 - NORMAL ，协商注销 - NEGOTIATE
                 "ReasonRemark": "测试单,注销",  # 注销原因
