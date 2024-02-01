@@ -282,7 +282,7 @@ def Issue_tp(day=-2):
 
 
 def Tomorrow_tp(day=-1):
-    """(太平_碎屏责任险)生效时间"""
+    """(太平_碎屏责任险)生效时间/出单即生效出单时间"""
     Tomorrow_tp = (datetime.datetime.now() - datetime.timedelta(days=-day)).strftime('%Y%m%d000050')
     return Tomorrow_tp
 
