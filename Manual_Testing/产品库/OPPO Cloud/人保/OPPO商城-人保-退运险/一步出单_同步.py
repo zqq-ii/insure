@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Mobilephone, Time, TomorrowPresently, Mailbox,Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Mobilephone, Time, TomorrowPresently, Mailbox, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -11,6 +11,7 @@ config = Config("config.ini")
 产品码：RB20231111
 计划码：RB2023111105
 """
+
 
 class One_order:
     def __init__(self):
@@ -42,8 +43,7 @@ class One_order:
                     "PolicyHolderType": "2",  # 投保人类型1-个人2-企业或者机构
                     "PolicyHolderName": "欧珀广东移动通信有限公司",  # 用户姓名（企业、公司名称）
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
-                    "PHIdType": "09",
-                    # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
+                    "PHIdType": "09",  # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                     "PHIdNumber": "914419007480321175",  # 证件号
                     "PHTelephone": Mobilephone(),  # 手机号（投保人类型为2-企业时非必填）
                     "PHBirthDate": None,  # 出生日期 （投保人类型为2-企业时非必填）
