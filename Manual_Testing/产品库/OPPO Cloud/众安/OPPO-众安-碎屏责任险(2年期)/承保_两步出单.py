@@ -2,14 +2,14 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
 
-class Surrender_trial:
+class Insure:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "host")
@@ -17,18 +17,21 @@ class Surrender_trial:
         self.ChannelCode = config.get_value(self.environment, "ChannelCode")
         self.key = config.get_value(self.environment, "key")
 
-    def Surrender_trial(self):
-        url = "/issuingmc/channelapi/policy/premiumCalculation"
+    def Insure(self):
+        url = "/issuingmc/channelapi/insure/accept"
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240124874834843",  # 保单号
-                "CancelDate": Time(),  # 退保申请日期
-                "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
+                "ApplyPolicyRef": "B8412192799308374249:7088:0",  # 投保单号
+                "PaymentFlowNum": RandomStr().create(),  # 支付流水唯一
+                "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
+                "Currency": "CNY",  # 币种
+                "TotalPremium": "0.00",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
+                "PaymentDate": "20240115120252"  # 支付时间
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
-            "RequestType": "0016",
+            "RequestType": "0007",
             "Version": "1.0.0"
         }
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
@@ -36,5 +39,5 @@ class Surrender_trial:
 
 if __name__ == "__main__":
     sys.stdout = Logger()
-    Res = Surrender_trial().Surrender_trial()
+    Res = Insure().Insure()
     print(f'[{Execution_Time()}]\n{Res}')

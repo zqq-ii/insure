@@ -2,14 +2,14 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
 
-class Surrender_trial:
+class IMEI_correction:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "host")
@@ -17,18 +17,19 @@ class Surrender_trial:
         self.ChannelCode = config.get_value(self.environment, "ChannelCode")
         self.key = config.get_value(self.environment, "key")
 
-    def Surrender_trial(self):
-        url = "/issuingmc/channelapi/policy/premiumCalculation"
+    def IMEI_correction(self):
+        url = "/issuingmc/channelapi/modify/machine/imei"
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240124874834843",  # 保单号
-                "CancelDate": Time(),  # 退保申请日期
-                "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
+                "PolicyNo": "PI07306240224911730218",  # 保单号
+                "ModifyNo": RandomStr().create(),  # 批改单号 (接口幂等字段)
+                "OldProductSerialNo": "DzOJqcH4BgjTRekt",  # 原序列号
+                "NewProductSerialNo": "DzOJqcH4BgjTRekt1"  # 新序列号
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
-            "RequestType": "0016",
+            "RequestType": "0045",
             "Version": "1.0.0"
         }
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
@@ -36,5 +37,5 @@ class Surrender_trial:
 
 if __name__ == "__main__":
     sys.stdout = Logger()
-    Res = Surrender_trial().Surrender_trial()
+    Res = IMEI_correction().IMEI_correction()
     print(f'[{Execution_Time()}]\n{Res}')

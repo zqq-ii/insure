@@ -2,11 +2,14 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time,Tomorrow,Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Time, Tomorrow, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
+"""
+注:测试环境出单成功后需保司手动汇总后才可进行理赔申请
+"""
 
 
 class Freight_claims:
@@ -22,7 +25,7 @@ class Freight_claims:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "PLE220234403QA00A00007",  # 保单号
+                "PolicyNo": "PLE220244403QX00A00134",  # 保单号
                 "ReportTime": Time(),  # 报案时间 yyyyMMddHHmmss
                 "ReporterName": "OPPO商城",  # 报案人姓名
                 "ReporterPhone": "13410506136",  # 报案人联系电话

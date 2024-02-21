@@ -9,7 +9,7 @@ from Manual_Testing.common.PrintData import Logger
 config = Config("config.ini")
 
 
-class Surrender_trial:
+class Release_Notice:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "host")
@@ -17,18 +17,18 @@ class Surrender_trial:
         self.ChannelCode = config.get_value(self.environment, "ChannelCode")
         self.key = config.get_value(self.environment, "key")
 
-    def Surrender_trial(self):
-        url = "/issuingmc/channelapi/policy/premiumCalculation"
+    def Release_Notice(self):
+        url = "/issuingmc/channelapi/insure/endorNotice"
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240124874834843",  # 保单号
-                "CancelDate": Time(),  # 退保申请日期
-                "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
+                "PolicyRef": "PI07306240224911729184",  # 保单号
+                "EndorDate": Time(),  # 脱保日期
+                "EndorReason": None  # 脱保原因 (阳光百万医疗(计划码YG2021010701，YG2021010702)非必填,其余产品必填)
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
-            "RequestType": "0016",
+            "RequestType": "0030",
             "Version": "1.0.0"
         }
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
@@ -36,5 +36,5 @@ class Surrender_trial:
 
 if __name__ == "__main__":
     sys.stdout = Logger()
-    Res = Surrender_trial().Surrender_trial()
+    Res = Release_Notice().Release_Notice()
     print(f'[{Execution_Time()}]\n{Res}')

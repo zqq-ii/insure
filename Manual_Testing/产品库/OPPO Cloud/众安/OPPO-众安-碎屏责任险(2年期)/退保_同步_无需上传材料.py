@@ -2,14 +2,14 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
+from Manual_Testing.common.RandomNumber import RandomStr,Execution_Time,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
 
-class Surrender_trial:
+class Synchronous_surrender:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "host")
@@ -17,18 +17,21 @@ class Surrender_trial:
         self.ChannelCode = config.get_value(self.environment, "ChannelCode")
         self.key = config.get_value(self.environment, "key")
 
-    def Surrender_trial(self):
-        url = "/issuingmc/channelapi/policy/premiumCalculation"
+    def Synchronous_surrender(self):
+        url = "/issuingmc/channelapi/policy/syncPolicyCancel"
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240124874834843",  # 保单号
-                "CancelDate": Time(),  # 退保申请日期
-                "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
+                "PolicyRef": "PI07306240224911729256",  # 保单号
+                "CancelDate": Time(),  # 退保申请时间
+                "CancelPremium": "0",  # 退保金额（不一定等于实际退费金额）
+                "Currency": None,  # 币种
+                "Type": None,  # 退保类型： 正常退保 - NORMAL ，协商退保 - NEGOTIATE
+                "ReasonRemark": None,  # 退保原因
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
-            "RequestType": "0016",
+            "RequestType": "0017",
             "Version": "1.0.0"
         }
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
@@ -36,5 +39,5 @@ class Surrender_trial:
 
 if __name__ == "__main__":
     sys.stdout = Logger()
-    Res = Surrender_trial().Surrender_trial()
+    Res = Synchronous_surrender().Synchronous_surrender()
     print(f'[{Execution_Time()}]\n{Res}')
