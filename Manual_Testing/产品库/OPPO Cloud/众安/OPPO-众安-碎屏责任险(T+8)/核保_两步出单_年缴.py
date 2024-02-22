@@ -31,7 +31,7 @@ class SJX_Underwriting:
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZAN2022021801",  # 计划代码
                     "IssueDate": "20240103113137",  # 出单时间
-                    "EffectiveDate": "20240111000000",  # 生效时间     # 注:(T+8)生效,支持倒签
+                    "EffectiveDate": "20240111000000",  # 生效时间     # 注:(T+8)生效,测试环境支持倒签
                     "ExpireDate": "20250110235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别

@@ -31,13 +31,13 @@ class SJX_Underwriting:
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZAN2024022001",  # 计划代码
                     "IssueDate": "20240115120252",  # 出单时间
-                    "EffectiveDate": "20240116000000",  # 生效时间     # 支持倒签
-                    "ExpireDate": "20260115235959",  # 失效时间
+                    "EffectiveDate": "20240123000000",  # 生效时间     # T+8,测试环境支持倒签
+                    "ExpireDate": "20260122235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
                     "TotalPremium": "351.00",  # 总保费
-                    "FaceAmount": "10000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
+                    "FaceAmount": "0.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": None,  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
                     "InstallmentNo": None  # 期数，分期趸交产品必传
