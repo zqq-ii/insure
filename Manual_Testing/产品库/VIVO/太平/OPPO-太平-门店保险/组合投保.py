@@ -101,39 +101,39 @@ class Joint_Investment:
                                 },
                             "PolicyHolder":
                                 {
-                                    "PolicyHolderType": "1",
-                                    "PolicyHolderName": "游点叼",
-                                    "PHIdType": "01",
-                                    "PHIdNumber": "431123199801075873",
-                                    "PHContactName": "游点叼",
-                                    "PHTelephone": "18289782730",
-                                    "PHEmail": "45454546@qq.com",
-                                    "PHAddress": "深圳市前海卓越T1",
-                                    "PHPostCode": "518000",
-                                    "PHBirthDate": "19980107000000"
+                                    "PolicyHolderType": "1",  # 投保人类型：1-个人，2-企业或者机构
+                                    "PolicyHolderName": "游点叼",  # 投保人名称（个人-姓名；企业/机构-公司/机构名称）
+                                    "PHIdType": "01",  # 证件类型;01居民身份证,02户口簿等;投保类型为2不传
+                                    "PHIdNumber": "431123199801075873",  # 证件号
+                                    "PHContactName": "游点叼",  # 联系人姓名
+                                    "PHTelephone": "13410506136",  # 联系人手机号
+                                    "PHEmail": "45454546@qq.com",  # 电子邮箱
+                                    "PHAddress": "深圳市前海卓越T1",  # 联系地址
+                                    "PHPostCode": "518000",  # 邮政编码
+                                    "PHBirthDate": "19980107000000"  # 出生日期;个人投保必传，格式YYYYMMDDHHMMSS
                                 },
                             "InsuredList":
                                 [
                                     {
-                                        "InsuredId": "1",
-                                        "InsuredName": "欧珀官方旗舰店前海分店",
-                                        "Email": "889776565@qq.com",
-                                        "IdNumber": "91441900MA545CQH4R",
-                                        "Type": "2",
-                                        "InsuredContactName": "游点叼",
-                                        "InsuredContactTelephone": "18289782730",
-                                        "InsuredAddress": "深圳市前海卓越T1-L02"
+                                        "InsuredId": "1",  # 被保险人唯一Id（一个被保人默认传“1”，多个被保人按顺序排序 ）
+                                        "InsuredName": "欧珀官方旗舰店前海分店",  # 被保人名称（个人-姓名；企业/机构-公司/机构名称）
+                                        "Email": "889776565@qq.com",  # 电子邮箱
+                                        "IdNumber": "91441900MA545CQH4R",  # 证件号
+                                        "Type": "2",  # 被保人类型：1个人，2-企业或者机构
+                                        "InsuredContactName": "游点叼",  # 联系人姓名
+                                        "InsuredContactTelephone": "18289782730",  # 联系人手机号
+                                        "InsuredAddress": "深圳市前海卓越T1-L02"  # 联系地址
                                     }
                                 ],
                             "SubjectMatterInsured":
                                 {
-                                    "SubjectMatterInsuredName": "欧珀官方旗舰店前海分店",
-                                    "SubjectMatterInsuredAddress": "广东省深圳市南山区前海卓越T1-L02",
+                                    "SubjectMatterInsuredName": "欧珀官方旗舰店前海分店",  # 门店名称
+                                    "SubjectMatterInsuredAddress": "广东省深圳市南山区前海卓越T1-L02",  # 门店地址
                                     "FaceAmount": 390,  # 标的保额 ，单位 元
                                     "StoreArea": 1,  # 门店面积 1：0-150平米，2：150-300平米
-                                    "Province": "广东省",
-                                    "City": "深圳市",
-                                    "District": "南山区"
+                                    "Province": "广东省",  # 省份
+                                    "City": "深圳市",  # 市
+                                    "District": "南山区"  # 区
                                 }
                         }
                     ]
@@ -150,5 +150,3 @@ if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Joint_Investment().Joint_Investment()
     print(f'[{Execution_Time()}]\n{Res}')
-
-
