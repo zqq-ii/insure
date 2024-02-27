@@ -3,7 +3,7 @@ from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.common.RandomNumber import RandomStr, Mobilephone, Execution_Time, SeveralMonths, Mailbox, Tomorrow, \
-    newIdNum,Birthday
+    newIdNum,Birthday,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -46,9 +46,9 @@ class One_order:
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
-                    "PHIdNumber": "441421199801078834",  # 证件号
+                    "PHIdNumber": newIdNum,  # 证件号
                     "PHTelephone": Mobilephone(),  # 手机号（投保人类型为2-企业时非必填）
-                    "PHBirthDate": Birthday("441421199801078834"),  # 出生日期 （投保人类型为2-企业时非必填）
+                    "PHBirthDate": Birthday(newIdNum),  # 出生日期 （投保人类型为2-企业时非必填）
                     "PHEmail": Mailbox(),  # 邮箱
                     "PHAddress": "深圳市",  # 详细地址
                     "PHAreaCode": "440300"  # 市级区域编码（例如：泰康人寿飞铁保需要传第三级区域编码“421381”对应“广水市”，全称为“湖北省随州市广水市”，区域编码由经济公司提供）
@@ -62,9 +62,9 @@ class One_order:
                         "InsuredType": None,  # 被保险人类型(证件类型)
                         "IdType": "01",
                         # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
-                        "IdNumber": "441421199801078834",  # 证件号
+                        "IdNumber": newIdNum,  # 证件号
                         "Mobile": None,  # 手机号
-                        "BirthDate": Birthday("441421199801078834"),  # 出生日期
+                        "BirthDate": Birthday(newIdNum),  # 出生日期
                         "Email": Mailbox(),  # 邮箱
                         "ResideAddress": "深圳市",  # 详细地址
                         "PolicyholderInsuredRelation": "01",  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传

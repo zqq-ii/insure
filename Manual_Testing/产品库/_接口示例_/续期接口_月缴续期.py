@@ -22,7 +22,7 @@ class Renewal:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "ZO8qENjYS91GnaT8",  # 第三方订单号
+                "AgencyPolicyRef": "ZO8qENjYS91GnaT8",  # 第三方订单号(新系统该字段移除)
                 "PlanCode": "PlanCode",  # 保险计划代码
                 "PaymentDate": Time(),  # 支付完成时间
                 "Currency": "CNY",  # 币别

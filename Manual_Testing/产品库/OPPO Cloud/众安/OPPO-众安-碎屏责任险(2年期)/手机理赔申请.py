@@ -22,11 +22,11 @@ class Claim_application:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "PI07306240224911730218",  # 保单号
+                "PolicyNo": "PI07306240224914781570",  # 保单号
                 "ReportOrderNo": RandomStr().create(),  # 报案订单号 (接口幂等字段)
                 "ReporterName": "彦祖",  # 报案人姓名
                 "ReporterPhone": "13410506136",  # 报案人联系电话
-                "ReportDate": "20240116120000",  # 报案时间
+                "ReportDate": "20240216120000",  # 报案时间
                 "ReportProvinceName": "广东省",  # 报案地 - 省
                 "ReportCityName": "深圳市",  # 报案地 - 市
                 "ReportAreaName": "南山区",  # 报案地 - 区
@@ -34,10 +34,10 @@ class Claim_application:
                 "ReportSource": "1",  # 报案来源渠道：1 - OPPO
                 "ReportRepairCharge": "111.11",  # 报案维修费用
                 "ReportServiceCharge": "50",  # 报案服务费
-                "DamageDate": "20240116120000",  # 出险时间
+                "DamageDate": "20240216120000",  # 出险时间
                 "DamageDetail": "测试单,反正就是坏了!",  # 出险详细经历（包括故障原因）
-                "MaterialList": ["O8412192799308374254"],  # 理赔材料Id列表 [“543534534”,”4324234234”]
-                "RepairCompleteDate": "20240120000000",  # 维修完成时间
+                "MaterialList": ["O8418125489173980364"],  # 理赔材料Id列表 [“543534534”,”4324234234”]
+                "RepairCompleteDate": "20240220000000",  # 维修完成时间
                 "Reserve1": "CN097013"  # 保留字段1（网点编码）
             },
             "ChannelCode": self.ChannelCode,
