@@ -3,7 +3,7 @@ from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.common.RandomNumber import RandomStr, Mobilephone, Execution_Time, SeveralMonths, Mailbox, Tomorrow, \
-    newIdNum,Birthday,Time
+    newIdNum, Birthday, Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -11,8 +11,10 @@ config = Config("config.ini")
 """
 产品码：TAIPING20221025
 计划：TAIPING2022102504
+暂未校验有效期
 """
 newIdNum = newIdNum(1998, 1, 7)
+
 
 class One_order:
     def __init__(self):

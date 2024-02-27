@@ -22,11 +22,10 @@ class IMEI_correction:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "PI07306240224914192439",  # 保单号
+                "PolicyNo": "PI07306240252921279232",  # 保单号
                 "ModifyNo": RandomStr().create(),  # 批改单号 (接口幂等字段)
-                "OldProductSerialNo": "XHtcPaS0cuWUj4NZ1",  # 原序列号
-
-                # "NewProductSerialNo": "XHtcPaS0cuWUj4NZ2"  # 新序列号
+                "OldProductSerialNo": "SdvJkmEms8xcklqi",  # 原序列号
+                "NewProductSerialNo": "SdvJkmEms8xcklqi1"  # 新序列号
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),

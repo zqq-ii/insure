@@ -22,7 +22,7 @@ class Policy_printing:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240224914179740",  # 保单号
+                "PolicyRef": "PI07306240252921279232",  # 保单号
                 "CertificateType": "100"  # 保单打印类型100-主保单,200-其它
             },
             "ChannelCode": self.ChannelCode,

@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -30,9 +30,9 @@ class SJX_Underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZAN2024022001",  # 计划代码
-                    "IssueDate": "20240115120252",  # 出单时间
-                    "EffectiveDate": "20240123000000",  # 生效时间     # T+8,测试环境支持倒签
-                    "ExpireDate": "20260122235959",  # 失效时间
+                    "IssueDate": Time(),  # 出单时间
+                    "EffectiveDate": Tomorrow(day=8),  # 生效时间               # 注:T+8,(测试环境支持倒签)
+                    "ExpireDate": SeveralYears(day=8,year=2),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴

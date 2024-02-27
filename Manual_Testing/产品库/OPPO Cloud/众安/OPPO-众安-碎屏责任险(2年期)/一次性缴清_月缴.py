@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -22,9 +22,9 @@ class Paid_up:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240224914192277",  # 需要缴费的保单号码
+                "PolicyRef": "PI07306240252921279232",  # 需要缴费的保单号码
                 "Type": "0",  # 0-月缴一次性缴清，仍是月缴保单；1- 月缴缴清转年缴
-                "PaymentDate": "20240215120252",  # 支付完成时间
+                "PaymentDate": Time(),  # 支付完成时间
                 "Currency": "CNY",  # 币别
                 "PaymentMethod": "2",  # 支付方式：1-支付宝；2-微信支付；3-通联支付；4-快钱支付;银行卡-银行卡;6-优惠券;7-其它：线下结算
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水号/商户订单号（第三方支付流水号）

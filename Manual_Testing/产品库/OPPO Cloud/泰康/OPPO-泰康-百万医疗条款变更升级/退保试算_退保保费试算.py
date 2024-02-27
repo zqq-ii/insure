@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -22,8 +22,8 @@ class Surrender_trial:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H240131062057060129758",  # 保单号
-                "CancelDate": "20240208000000",  # 退保申请日期
+                "PolicyRef": "H240227127051980129758",  # 保单号
+                "CancelDate": Time(),  # 退保申请日期
                 "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
             },
             "ChannelCode": self.ChannelCode,

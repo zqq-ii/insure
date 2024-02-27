@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -22,8 +22,8 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H240131062052360136937",  # 保单号
-                "CancelDate":"20240208000000",  # 退保申请时间
+                "PolicyRef": "H240227127043550129758",  # 保单号
+                "CancelDate": Time(),  # 退保申请时间
                 "RefundPremium": "0.00",  # 退保金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
                 "Type": "NORMAL",  # 退保类型： 正常退保 - NORMAL ，协商退保 - NEGOTIATE

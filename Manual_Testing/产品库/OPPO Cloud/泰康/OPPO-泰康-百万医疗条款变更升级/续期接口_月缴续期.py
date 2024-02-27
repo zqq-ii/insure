@@ -22,7 +22,6 @@ class Renewal:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "vGSsROlgVB3K9yT6",  # 第三方订单号
                 "PlanCode": "PlanCode",  # 保险计划代码
                 "PaymentDate": Time(),  # 支付完成时间
                 "Currency": "CNY",  # 币别
@@ -30,7 +29,7 @@ class Renewal:
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水号（第三方支付流水号）
                 "InstallmentNo": "2",  # 分期数整数(第几期)
                 "InstallmentPremium": "53.40",  # 分期产品，期次保费
-                "OriginalPolicyRef": "H240131062057060129758"  # 需要续期的保单号码
+                "OriginalPolicyRef": "H240227127043550129758"  # 需要续期的保单号码
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
