@@ -78,7 +78,7 @@ class SJX_Underwriting:
                         "ProductBrand": "01",  # 产品品牌：01(OPPO) 04(OnePlus) 05(realme)
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
-                        "ProductSerialNo": "EOJGEJ5215150008",  # 产品序列号
+                        "ProductSerialNo": RandomStr().create(),  # 产品序列号
                         "ActiveDate": "20230407000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "7000",  # 产品价格
                         "PurchaseChannel": None,  # 购买渠道(预留字段)

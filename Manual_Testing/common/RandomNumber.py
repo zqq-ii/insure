@@ -15,7 +15,7 @@ class RandomStr:
         # 'punct': r'''!@#$%^&*''',
     }
 
-    def __init__(self, length=16, *contents):
+    def __init__(self, length=10, *contents):
         self.kinds = {}
         self.length = length
         if len(contents) == 0:
@@ -48,7 +48,7 @@ class RandomStr:
             res += random.choice(charset)
         str_list = list(res)
         random.shuffle(str_list)
-        return ''.join(str_list)
+        return 'TenSer' + ''.join(str_list)
 
 
 def CustomRandomStr(custom="ZDY", length=13):
