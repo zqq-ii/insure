@@ -26,10 +26,10 @@ class JKX_underwriting:
         body = {
             "Data": {
                 "Policy": {  # 保单信息
-                    "AgencyPolicyRef": "20231228211305597020006000030760",  # 第三方订单号
+                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZAN2021071001",  # 计划代码;
                     "IssueDate": Time(),  # 出单时间
-                    "EffectiveDate": Tomorrow(),  # 生效时间
+                    "EffectiveDate": Tomorrow(),  # 生效时间 T+1
                     "ExpireDate": SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型

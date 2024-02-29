@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 from Manual_Testing.common import RandomData
-import time, datetime, random, string, json
+import time, datetime, random, string, json, calendar
 from dateutil.relativedelta import relativedelta
 
 
@@ -139,7 +139,6 @@ def Birthday(id_card=newIdNum()):
     day = id_card[12:14]
     return ("{}{}{}000000".format(year, month, day))
 
-
 def qwer(id_card):
     year = int(id_card[6:10])
     month = int(id_card[10:12])
@@ -246,7 +245,7 @@ def SeveralYears(day=1, year=1):
     2,例:T+30场景,失效在2月该2月最大28天,那么这里传入的应该就是29
     """
     date = (datetime.datetime.now() - datetime.timedelta(days=-day))
-    new_date = (date - datetime.timedelta(days=+1)).strftime('%Y%m%d235959')
+    new_date = (date - datetime.timedelta(days=1)).strftime('%Y%m%d235959')
     timeArray = time.strptime(new_date, "%Y%m%d%H%M%S")
     timeStamp = (time.mktime(timeArray))  # 转化为时间戳
     start_year = int(time.strftime('%Y', time.localtime(timeStamp))) + year
@@ -312,3 +311,4 @@ if __name__ == '__main__':
         print(newIdNum(1998, 1, 7, "男"))  # 随机生成身份证
 
     # print(Time(), Time(), TomorrowPresently(90))
+    print(datetime.timedelta(days=+1))
