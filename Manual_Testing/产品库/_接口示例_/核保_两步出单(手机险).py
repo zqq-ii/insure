@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time,Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Time, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -62,8 +62,7 @@ class SJX_Underwriting:
                         "Mobile": None,  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
                         "ResideAddress": None,  # 详细地址
-                        "PolicyholderInsuredRelation": None,
-                        # 被保人与投保人关系(01本人,02配偶,03丈夫,04妻子,05儿子,06女儿,07儿女,08父母,09父亲,10母亲) 投保类型为2时不传
+                        "PolicyholderInsuredRelation": None,  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
                         "SocialSecurityFlag": None,  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
                         "UnderwritingType": None,  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是 投保类型为2时不传
                         "UnderwritingQuestionList": None,  # 智能核保问卷(智能核保问卷部分是时必填 ) 投保类型为2时不传
