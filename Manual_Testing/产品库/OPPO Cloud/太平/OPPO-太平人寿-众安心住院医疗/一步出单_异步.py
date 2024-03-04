@@ -3,7 +3,7 @@ from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.common.RandomNumber import RandomStr, Mobilephone, Execution_Time, SeveralMonths, Mailbox, Tomorrow, \
-    newIdNum,Birthday
+    newIdNum, Birthday
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -13,6 +13,7 @@ config = Config("config.ini")
 计划：TAIPING2023062904
 """
 newIdNum = newIdNum(1998, 1, 7)
+
 
 class One_order:
     def __init__(self):
@@ -44,7 +45,7 @@ class One_order:
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
                     "PolicyHolderName": "代艳",  # 用户姓名（企业、公司名称）
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
-                    "PHIdType": "01",# 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
+                    "PHIdType": "01",  # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                     "PHIdNumber": "510902198601166603",  # 证件号
                     "PHTelephone": Mobilephone(),  # 手机号（投保人类型为2-企业时非必填）
                     "PHBirthDate": Birthday("510902198601166603"),  # 出生日期 （投保人类型为2-企业时非必填）
@@ -59,7 +60,8 @@ class One_order:
                         "Gender": None,  # 性别（0女，1男，2其它）
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构
                         "InsuredType": None,  # 被保险人类型(证件类型)
-                        "IdType": "01",# 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
+                        "IdType": "01",
+                        # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                         "IdNumber": "510902198601166603",  # 证件号
                         "Mobile": None,  # 手机号
                         "BirthDate": Birthday("510902198601166603"),  # 出生日期
@@ -72,15 +74,7 @@ class One_order:
                         "AreaCode": None,  # 市级区域编码（例如：泰康人寿飞铁保需要传第三级区域编码“421381”对应“广水市”，全称为“湖北省随州市广水市”，区域编码由经济公司提供）
                         "ProfessionHighRisk": None  # 是否高危职业：0-否，1-是
                     }
-                ],
-                # "Extension": {  # 拓展信息
-                #     "DeliveryInfo": {  # 货运信息(非必填),退运险必传
-                #         "Ssoid": None,  # 用户唯一ID(OPPO用户唯一标识)
-                #         "SigningTime": None,  # 签收时间 yyyyMMddHHmmss
-                #         "OrderNO": None,  # 大订单号，存在多个订单时的的父订单号
-                #         "SubOrderNo": [None],  # 小订单号
-                #     }
-                # }
+                ]
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
