@@ -10,7 +10,6 @@ config = Config("config.ini")
 """
 产品码:TP20220318
 计划代码:年缴:TP2022031801,月缴:TP2022031802
-注:测试环境,太平碎屏险出单后,需要保司手动将保单录入核心后才可理赔
 """
 
 
@@ -79,7 +78,7 @@ class SJX_Underwriting:
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
                         "ProductSerialNo": RandomStr().create(),  # 产品序列号
-                        "ActiveDate": "20231230000000",  # 激活日期 碎屏险必传
+                        "ActiveDate": "20240115000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "7215.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
                         "Source": None  # 流量来源：1 - 固定入口、2 - 主动推送、3 - 其它，默认固定入口（比如钱包固定位、主动推送）

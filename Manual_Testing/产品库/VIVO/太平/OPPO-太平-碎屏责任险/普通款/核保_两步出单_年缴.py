@@ -28,9 +28,9 @@ class SJX_Underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TP2022031801",  # 计划代码   (普通款:TP2022031801)
-                    "IssueDate": Time(),  # 出单时间
-                    "EffectiveDate": Tomorrow(),  # 生效时间
-                    "ExpireDate": SeveralYears(),  # 失效时间
+                    "IssueDate": "20240117235959",  # 出单时间     (此产品测试环境可倒签)
+                    "EffectiveDate": "20240118000000",  # 生效时间
+                    "ExpireDate": "20250117235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -79,7 +79,7 @@ class SJX_Underwriting:
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
                         "ProductSerialNo": RandomStr().create(),  # 产品序列号
-                        "ActiveDate": "20231230000000",  # 激活日期 碎屏险必传
+                        "ActiveDate": "20240115000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "7215.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
                         "Source": None  # 流量来源：1 - 固定入口、2 - 主动推送、3 - 其它，默认固定入口（比如钱包固定位、主动推送）
