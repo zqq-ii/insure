@@ -78,7 +78,7 @@ class SJX_Underwriting:
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
                         "ProductSerialNo": RandomStr().create(),  # 产品序列号
-                        "ActiveDate": "20231230000000",  # 激活日期 碎屏险必传
+                        "ActiveDate": "20240117235959",  # 激活日期 碎屏险必传
                         "ProductPrice": "265.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
                         "Source": None  # 流量来源：1 - 固定入口、2 - 主动推送、3 - 其它，默认固定入口（比如钱包固定位、主动推送）
@@ -87,10 +87,10 @@ class SJX_Underwriting:
                 "AutoRenewalFlag": None,
                 # "InstallmentList": [  # 分期信息列表，缴费方式为月缴PaymentType=2时必填
                 #     {
-                #         "InstallmentNum": None,  # 分期数，如月缴12期
-                #         "InstallmentNo": None,  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
-                #         "InstallmentPremium": None,  # 对应分期号的保费，当前产品固定为首期保费
-                #         "EachPremium": None  # 分期保费
+                #         "InstallmentNum": "1",  # 分期数，如月缴12期
+                #         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
+                #         "InstallmentPremium": "3.80",  # 对应分期号的保费，当前产品固定为首期保费
+                #         "EachPremium": "3.80"  # 分期保费
                 #     }
                 # ]
             },

@@ -3,7 +3,7 @@ from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.common.RandomNumber import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, newIdNum, \
-    Birthday
+    Birthday,Nickname
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -14,7 +14,8 @@ config = Config("config.ini")
 注:核保不请求保司
 默认月缴保费45
 """
-newIdNum = newIdNum(1998, 1, 7)
+Nickname = Nickname()
+newIdNum = newIdNum(1998, 1, 7, "男")
 
 
 class JKX_underwriting:
@@ -47,7 +48,7 @@ class JKX_underwriting:
                 },
                 "PolicyHolder": {  # 投保人信息
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
-                    "PolicyHolderName": "地中海",  # 用户姓名/企业名
+                    "PolicyHolderName": Nickname,  # 用户姓名/企业名
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
@@ -60,7 +61,7 @@ class JKX_underwriting:
                 "InsuredList": [  # 被保人信息列表
                     {
                         "InsuredId": "7",  # 被保险人唯一Id，用来确认该保单下被保险人的唯一性
-                        "InsuredName": "地中海",  # 用户姓名/企业名
+                        "InsuredName": Nickname,  # 用户姓名/企业名
                         "Gender": None,  # 性别（0女，1男，2其它）
                         "InsuredType": None,  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
