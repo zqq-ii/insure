@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -22,11 +22,11 @@ class Insure:
         request_url = self.host + url
         body = {
             "Data": {
-                "ApplyPolicyRef": "I8332252772047650907",  # 投保单号
+                "ApplyPolicyRef": "I8471581923446857796",  # 投保单号
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水唯一
                 "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
                 "Currency": "CNY",  # 币种
-                "TotalPremium": "74.50",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
+                "TotalPremium": "894.00",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
                 "PaymentDate": Time()  # 支付时间;
             },
             "ChannelCode": self.ChannelCode,
