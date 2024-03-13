@@ -32,7 +32,7 @@ class SJX_Underwriting:
                     "PlanCode": "TP2022072802",  # 计划代码   (升级款:TP2022072802)
                     "IssueDate": "20240117235959",  # 出单时间      (此产品测试环境可倒签)
                     "EffectiveDate": "20240117235959",  # 生效时间    ,(该产品出单即生效,T+0)
-                    "ExpireDate": "20250117235958",  # 失效时间
+                    "ExpireDate": "20240217235958",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴

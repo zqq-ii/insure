@@ -27,7 +27,7 @@ class EncryptDate:
 
     def decrypt(self, decrData):
         res = base64.decodebytes(decrData.encode("utf-8"))
-        msg = self.aes.decrypt(res).decode("utf-8")
+        msg = self.aes.decrypt(res).decode()
         return self.unpad(msg)
 
 
