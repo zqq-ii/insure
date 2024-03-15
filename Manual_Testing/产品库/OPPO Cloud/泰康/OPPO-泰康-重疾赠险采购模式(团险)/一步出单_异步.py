@@ -43,7 +43,7 @@ class One_order:
                     "TotalPremium": "0",  # 总保费
                     "Currency": "CNY",  # 币别
                     "PaymentType": "4",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "FaceAmount": "1.00",  # 保额,注：1、保额可批增为初始保额2、医疗险多种条款为保额之和,(1000,5000,10000,20000)
+                    "FaceAmount": "1000.00",  # 保额,注：1、保额可批增为初始保额2、医疗险多种条款为保额之和,(1000,5000,10000,20000)
                     "ResponsibilityList": None  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
                 },
                 "PolicyHolder": {
@@ -67,9 +67,9 @@ class One_order:
                         "InsuredType": None,  # 被保险人类型(证件类型)
                         "IdType": "01",
                         # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
-                        "IdNumber": newIdNum(1998, 1, 7),  # 证件号
+                        "IdNumber": newIdNum(1973, 1, 7),  # 证件号
                         "Mobile": None,  # 手机号
-                        "BirthDate": Birthday(newIdNum(1998, 1, 7)),  # 出生日期
+                        "BirthDate": Birthday(newIdNum(1973, 1, 7)),  # 出生日期
                         "Email": Mailbox(),  # 邮箱
                         "ResideAddress": "釜山市",  # 详细地址
                         "PolicyholderInsuredRelation": "22",  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
@@ -86,7 +86,6 @@ class One_order:
             "RequestType": "0005",
             "Version": "1.0.0",
         }
-        # print(json.dumps(body, ensure_ascii=False))
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
 
 
