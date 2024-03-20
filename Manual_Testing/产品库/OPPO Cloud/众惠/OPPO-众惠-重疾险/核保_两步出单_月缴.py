@@ -34,7 +34,7 @@ class JKX_underwriting:
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "195.00",  # 总保费
+                    "TotalPremium": "278.04",  # 总保费
                     "FaceAmount": "140000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
@@ -77,8 +77,8 @@ class JKX_underwriting:
                     {
                         "InstallmentNum": "12",  # 分期数，如月缴12期
                         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
-                        "InstallmentPremium": "16.25",  # 对应分期号的保费，当前产品固定为首期保费
-                        "EachPremium": "16.25"  # 分期保费
+                        "InstallmentPremium": "23.17",  # 对应分期号的保费，当前产品固定为首期保费
+                        "EachPremium": "23.17"  # 分期保费
                     }
                 ]
             },

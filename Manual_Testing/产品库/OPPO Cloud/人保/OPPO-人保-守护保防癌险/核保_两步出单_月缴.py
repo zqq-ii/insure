@@ -3,7 +3,7 @@ from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.common.RandomNumber import RandomStr, Time, Execution_Time, Nickname, \
-    newIdNum, Birthday
+    newIdNum, Birthday,Tomorrow,SeveralYears
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -33,13 +33,13 @@ class JKX_underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "RB2021101103",  # 计划代码;
-                    "IssueDate": "20231123235959",  # 出单时间      (注:可倒签)
-                    "EffectiveDate": "20231124000000",  # 生效时间
-                    "ExpireDate": "20241123235959",  # 失效时间
+                    "IssueDate": Time(),  # 出单时间      (注:可倒签)
+                    "EffectiveDate": Tomorrow(),  # 生效时间
+                    "ExpireDate": SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "153.60",  # 总保费
+                    "TotalPremium": "223.20",  # 总保费
                     "FaceAmount": "6000000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
@@ -81,8 +81,8 @@ class JKX_underwriting:
                     {
                         "InstallmentNum": "12",  # 分期数，如月缴12期
                         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
-                        "InstallmentPremium": "12.8",  # 对应分期号的保费，当前产品固定为首期保费
-                        "EachPremium": "12.8"  # 分期保费
+                        "InstallmentPremium": "18.60",  # 对应分期号的保费，当前产品固定为首期保费
+                        "EachPremium": "18.60"  # 分期保费
                     }
                 ]
             },

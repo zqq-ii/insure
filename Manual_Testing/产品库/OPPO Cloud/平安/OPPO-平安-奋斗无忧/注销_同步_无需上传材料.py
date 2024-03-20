@@ -22,7 +22,7 @@ class Synchronize_logout:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "10560006600504865200",  # 保单号
+                "PolicyRef": "10560006600504973532",  # 保单号
                 "CancelDate":"20240109173808",  # 注销申请时间
                 "RefundPremium": None,  # 注销金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种
