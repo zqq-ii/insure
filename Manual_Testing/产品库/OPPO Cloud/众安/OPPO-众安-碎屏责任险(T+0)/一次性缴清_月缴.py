@@ -22,14 +22,14 @@ class Paid_up:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240124880572445",  # 需要缴费的保单号码
+                "PolicyRef": "PI07306240361902882029",  # 需要缴费的保单号码
                 "Type": "1",  # 0-月缴一次性缴清，仍是月缴保单；1- 月缴缴清转年缴
                 "PaymentDate": "20240215120252",  # 支付完成时间
                 "Currency": "CNY",  # 币别
                 "PaymentMethod": "7",  # 支付方式：1-支付宝；2-微信支付；3-通联支付；4-快钱支付;银行卡-银行卡;6-优惠券;7-其它：线下结算
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水号/商户订单号（第三方支付流水号）
-                "StartInstallmentNo": "2",  # 开始缴费分期号
-                "PaymentPremium": "67.10",  # 实际支付总保费
+                "StartInstallmentNo": "3",  # 开始缴费分期号
+                "PaymentPremium": "61",  # 实际支付总保费
                 "DiscountPremium": "0",  # 优惠总金额(无优惠为0)
                 "MerchantOrderNum": None  # 备注无
             },

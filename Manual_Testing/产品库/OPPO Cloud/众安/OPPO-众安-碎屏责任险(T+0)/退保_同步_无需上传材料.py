@@ -22,7 +22,7 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "PI07306240124880579486",  # 保单号
+                "PolicyRef": "PI07306240361902882029",  # 保单号
                 "CancelDate": Time(),  # 退保申请时间
                 "CancelPremium": "0",  # 退保金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种

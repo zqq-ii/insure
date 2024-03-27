@@ -22,10 +22,10 @@ class Payment_refund:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "Ut8Hr3pYpUXlDmaS",  # 第三方渠道公司保单号码或者第三方渠道公司订单号码
-                "PolicyRef": "IH1100512043123030",  # 保单号
+                "AgencyPolicyRef": "TenSerr3fOTKRmvD",  # 第三方渠道公司保单号码或者第三方渠道公司订单号码
+                "PolicyRef": "P10E120240101V0014488",  # 保单号
                 "InstallmentNo": "1",  # 分期号(兼容资金安全险非必填),非分期产品默认为第一期
-                "TotalPremium": "91.00",  # 保费，分期产品为对应期数保费
+                "TotalPremium": "806.40",  # 保费，分期产品为对应期数保费
                 "Currency": "CNY",  # 币别
                 "PaymentMethod": "2",  # 支付方式：1-支付宝2-微信支付3-通联支付4-快钱支付
                 "MerchantOrderNum": RandomStr().create(),  # 商户订单号（钱包侧给到微信/支付宝的订单号）

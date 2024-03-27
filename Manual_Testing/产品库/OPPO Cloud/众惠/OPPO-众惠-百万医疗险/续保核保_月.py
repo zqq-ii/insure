@@ -27,8 +27,8 @@ class Renew_insurance:
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZH2023110901", # 续保计划码
                     "IssueDate": Time(),  # 出单时间      (注:不可倒签)
-                    "EffectiveDate": Tomorrow(day=1),  # 生效时间
-                    "ExpireDate": SeveralYears(day=1),  # 失效时间
+                    "EffectiveDate": Tomorrow(),  # 生效时间
+                    "ExpireDate": SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币种
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -52,6 +52,7 @@ class Renew_insurance:
                         "InsuredId": "7",  # 被保险人唯一Id
                         "InsuredName": "伸臂马良",  # 用户姓名
                         "InsuredType": None,  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
+                        "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",
                         # 证件类型证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
                         "IdNumber": "652325199801079183",  # 证件号

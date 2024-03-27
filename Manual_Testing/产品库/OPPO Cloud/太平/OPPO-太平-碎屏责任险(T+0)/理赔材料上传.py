@@ -22,11 +22,11 @@ class Material_upload:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "EP202403640000006658",  # 保单号
+                "PolicyNo": "EP202403640076459352",  # 保单号
                 "MaterialName": "维修前照片.jpg",  # 材料名，示例：xxx.png
                 "MaterialType": "2",  # 材料类型：1 - 证件照 2、维修前照片 3、维修后照片
                 "MaterialFileType": "FILE_URL",  # 材料文件类型：FILE_URL - 文件地址、BASE64 - base64数据流
-                "Data": "https://picnew13.photophoto.cn/20190527/ziranfengjingtupiansucaibizhishanshuifengjing-33283943_1.jpg"
+                "Data": "https://fast-wallet.finz.oppomobile.com/file/wealth/20240318/5f021033-f3b5-4d2c-97ea-ced17d61b806.png"
                 # 数据
             },
             "ChannelCode": self.ChannelCode,

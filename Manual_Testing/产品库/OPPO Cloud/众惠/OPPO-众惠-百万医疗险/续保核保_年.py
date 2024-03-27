@@ -23,26 +23,26 @@ class Renew_insurance:
         body = {
             "Data": {
                 "Policy": {
-                    "OriginalPolicyRef": "P10E120230101V0020372",  # 原保单号
+                    "OriginalPolicyRef": "P10E120240101V0014490",  # 原保单号
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZH2023110901", # 续保计划码
                     "IssueDate": Time(),  # 出单时间      (注:不可倒签)
-                    "EffectiveDate": Tomorrow(day=1),  # 生效时间
-                    "ExpireDate": SeveralYears(day=1),  # 失效时间
+                    "EffectiveDate": Tomorrow(),  # 生效时间
+                    "ExpireDate": SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币种
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "628.80",  # 总保费
+                    "TotalPremium": "806.40",  # 总保费
                     "FaceAmount": "6000000.00",  # 保额
                     "InstallmentNumber": None,  # 分期期数
                     "ResponsibilityList": None  # 责任列表(无特殊说明必传)目前用于续保责任免除场景示例： [“010231”,”010232”]
                 },
                 "PolicyHolder": {
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
-                    "PolicyHolderName": "伸臂马良",  # 用户姓名
+                    "PolicyHolderName": "斜刘海",  # 用户姓名
                     "PHIdType": "01",
                     # 证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
-                    "PHIdNumber": "652325199801079183",  # 证件号
+                    "PHIdNumber": "513333199801079028",  # 证件号
                     "PHBirthDate": "19980107000000",  # 出生日期
                     "PHTelephone": "13410506136",  # 手机号
                     "SocialSecurityFlag": "0"  # 有无社保 (0无1有)
@@ -50,11 +50,12 @@ class Renew_insurance:
                 "InsuredList": [
                     {
                         "InsuredId": "7",  # 被保险人唯一Id
-                        "InsuredName": "伸臂马良",  # 用户姓名
+                        "InsuredName": "斜刘海",  # 用户姓名
                         "InsuredType": None,  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
+                        "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",
                         # 证件类型证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
-                        "IdNumber": "652325199801079183",  # 证件号
+                        "IdNumber": "513333199801079028",  # 证件号
                         "BirthDate": "19980107000000",  # 出生日期
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "PolicyholderInsuredRelation": "01",
