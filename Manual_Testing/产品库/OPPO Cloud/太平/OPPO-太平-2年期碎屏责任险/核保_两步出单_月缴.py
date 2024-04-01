@@ -2,14 +2,14 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
-产品码:TP20220728
-计划代码:年缴:TP2022072801,月缴:TP2022072802
+产品码:TP20230324
+计划代码:年缴:TP2023032401,月缴:TP2023032402
 注:测试环境,太平碎屏险出单后,需要保司手动将保单录入核心后才可理赔
 """
 
@@ -29,16 +29,16 @@ class SJX_Underwriting:
             "Data": {
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
-                    "PlanCode": "TP2022072802",  # 计划代码   (升级款:TP2022072802)
-                    "IssueDate": "20240317235959",  # 出单时间      (此产品测试环境可倒签)
-                    "EffectiveDate": "20240317235959",  # 生效时间    ,(该产品出单即生效,T+0)
-                    "ExpireDate": "20240417235958",  # 失效时间
+                    "PlanCode": "TP2023032402",  # 计划代码
+                    "IssueDate": "20240217235959",  # 出单时间     (此产品测试环境可倒签)
+                    "EffectiveDate": "20240218000000",  # 生效时间
+                    "ExpireDate": "20240317235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "3.80",  # 总保费
-                    "FaceAmount": "3000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
-                    "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
+                    "TotalPremium": "2.90",  # 总保费
+                    "FaceAmount": "2000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
+                    "InstallmentNumber": "24",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
                     "InstallmentNo": "1"  # 期数，分期趸交产品必传
                 },
@@ -79,7 +79,7 @@ class SJX_Underwriting:
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
                         "ProductSerialNo": RandomStr().create(),  # 产品序列号
-                        "ActiveDate": "20240317235959",  # 激活日期 碎屏险必传
+                        "ActiveDate": "20240318000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "265.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
                         "Source": None  # 流量来源：1 - 固定入口、2 - 主动推送、3 - 其它，默认固定入口（比如钱包固定位、主动推送）

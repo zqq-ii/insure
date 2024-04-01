@@ -32,13 +32,13 @@ class Increase_coverage:
                     "CorrectInfo": {
                         "Currency": "CNY",  # 币种
                         "CorrectPremium": "0",  # 批增保费,赠险传0
-                        "OriginalAmount": "1000.00",  # 原有保额
-                        "CorrectAmount": "10",  # 批增保额
+                        "OriginalAmount": "10.00",  # 原有保额
+                        "CorrectAmount": "990",  # 批增保额
                         "CorrectNo": RandomStr().create(),  # 批单申请号,保证唯一
                         "CorrectEffectiveDate": Tomorrow()  # 批单生效时间，T+1零点生效
                     },
                     "PlanCode": "TKG20240324F04",  # 计划代码
-                    "PolicyRef": "H231228446736240117481"  # 保单号
+                    "PolicyRef": "6H2405DA3A2TNK6"  # 保单号
                 }
             },
             "ChannelCode": self.ChannelCode,

@@ -8,7 +8,8 @@ from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
-计划代码:年缴:TP2022031801,月缴:TP2022031802
+产品码:TP20220728
+计划代码:年缴:TP2022072801,月缴:TP2022072802
 注:测试环境,太平碎屏险出单后,需要保司手动将保单录入核心后才可理赔
 """
 
@@ -28,10 +29,10 @@ class SJX_Underwriting:
             "Data": {
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
-                    "PlanCode": "TP2022031802",  # 计划代码   (普通款:TP2022031802)
+                    "PlanCode": "TP2022072802",  # 计划代码   (升级款:TP2022072802)
                     "IssueDate": "20240317235959",  # 出单时间      (此产品测试环境可倒签)
-                    "EffectiveDate": "20240318000000",  # 生效时间
-                    "ExpireDate": "20240417235959",  # 失效时间
+                    "EffectiveDate": "20240317235959",  # 生效时间    ,(该产品出单即生效,T+0)
+                    "ExpireDate": "20240417235958",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -39,7 +40,7 @@ class SJX_Underwriting:
                     "FaceAmount": "3000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
-                    "InstallmentNo": "1"  # 期数，分期趸交产品必传
+                    "InstallmentNo": "2"  # 期数，分期趸交产品必传
                 },
                 "PolicyHolder": {  # 投保人信息
                     "PolicyHolderType": "2",  # 投保人类型1-个人2-企业或者机构
@@ -77,8 +78,8 @@ class SJX_Underwriting:
                         "ProductBrand": "01",  # 产品品牌：01(OPPO) 04(OnePlus) 05(realme)
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
-                        "ProductSerialNo": RandomStr().create(),  # 产品序列号
-                        "ActiveDate": "20240318000000",  # 激活日期 碎屏险必传
+                        "ProductSerialNo": "TenSerVP4kkGGp68",  # 产品序列号
+                        "ActiveDate": "20240317235959",  # 激活日期 碎屏险必传
                         "ProductPrice": "265.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
                         "Source": None  # 流量来源：1 - 固定入口、2 - 主动推送、3 - 其它，默认固定入口（比如钱包固定位、主动推送）
@@ -87,10 +88,10 @@ class SJX_Underwriting:
                 "AutoRenewalFlag": None,
                 # "InstallmentList": [  # 分期信息列表，缴费方式为月缴PaymentType=2时必填
                 #     {
-                #         "InstallmentNum": "1",  # 分期数，如月缴12期
-                #         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
-                #         "InstallmentPremium": "3.80",  # 对应分期号的保费，当前产品固定为首期保费
-                #         "EachPremium": "3.80"  # 分期保费
+                #         "InstallmentNum": None,  # 分期数，如月缴12期
+                #         "InstallmentNo": None,  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
+                #         "InstallmentPremium": None,  # 对应分期号的保费，当前产品固定为首期保费
+                #         "EachPremium": None  # 分期保费
                 #     }
                 # ]
             },
