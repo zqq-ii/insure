@@ -9,7 +9,7 @@ from Manual_Testing.common.PrintData import Logger
 config = Config("config.ini")
 """
 团险,执行定时任务异步退保团体中保单数量不得低于3个否则不可退保
-退保批减流程:请求退保接口-泰康团险主动异步退保定时任务-保单状态变更更新数据库-保单状态变更推送销售方
+流程注:请求退保接口>泰康团险主动异步退保定时任务/团险健康金批增款退保(执行后等待回调成功)>保单状态变更更新数据库任务>保单状态变更推送销售方任务
 """
 
 
@@ -45,4 +45,3 @@ if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Synchronous_surrender().Synchronous_surrender()
     print(f'[{Execution_Time()}]\n{Res}')
-

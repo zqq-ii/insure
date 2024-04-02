@@ -9,7 +9,7 @@ from Manual_Testing.common.PrintData import Logger
 config = Config("config.ini")
 """
 团险,执行定时任务异步退保团体中保单数量不得低于3个否则不可退保
-退保批减流程:请求退保接口-泰康团险主动异步退保定时任务-保单状态变更更新数据库-保单状态变更推送销售方
+流程注:请求退保接口>泰康团险购药金主动异步退保(执行后等待回调成功)>保单状态变更更新数据库任务>保单状态变更推送销售方任务
 """
 
 
@@ -26,7 +26,7 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "6H2405DA88T3206",  # 保单号
+                "PolicyRef": "6H2405DA88T3926",  # 保单号
                 "CancelDate": Time(),  # 退保申请时间
                 "RefundPremium": "0.00",  # 退保金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
