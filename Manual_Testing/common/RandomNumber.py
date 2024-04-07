@@ -1,4 +1,4 @@
-# This Python file uses the following encoding: utf-8
+# -*- coding: utf-8 -*-
 from Manual_Testing.common import RandomData
 import time, datetime, random, string, json, calendar
 from dateutil.relativedelta import relativedelta

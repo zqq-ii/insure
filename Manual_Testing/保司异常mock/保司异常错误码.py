@@ -1,4 +1,4 @@
-# This Python file uses the following encoding: utf-8
+# -*- coding: utf-8 -*-
 tkC = ['100_UDW_C02', '100_UDW_P01', '100_SUD_545', '100_MAR_016', '100_MAR_015', '100_TWO_084', '100_TWO_086',
        '100_TWO_087', '100_TWO_021', '100_UDW_P06', '100_XYD_T03', '100_XYD_S62', '100_GWY_S01', '100_UDW_S69',
        '100_ISG_002', '100_ISU_014', '100_OSI_033', '100_OSI_032', '100_SUD_544', '100_SUD_543', '100_SUD_542',

@@ -1,4 +1,4 @@
-# This Python file uses the following encoding: utf-8
+# -*- coding: utf-8 -*-
 import requests, json
 from Manual_Testing.common.encryption_decryption import EncryptDate
 from Manual_Testing.common.RandomNumber import JsonFormatting

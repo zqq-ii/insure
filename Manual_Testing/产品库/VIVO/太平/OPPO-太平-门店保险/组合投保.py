@@ -1,4 +1,4 @@
-# This Python file uses the following encoding: utf-8
+# -*- coding: utf-8 -*-
 import json, sys
 from Manual_Testing.common.PrintData import Logger
 from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time
