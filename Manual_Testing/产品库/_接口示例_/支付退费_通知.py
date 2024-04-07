@@ -2,7 +2,7 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time,Execution_Time
+from Manual_Testing.common.RandomNumber import RandomStr, Time, Execution_Time
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -27,9 +27,9 @@ class Payment_refund:
                 "InstallmentNo": "1",  # 分期号(兼容资金安全险非必填),非分期产品默认为第一期
                 "TotalPremium": "52.40",  # 保费，分期产品为对应期数保费
                 "Currency": "CNY",  # 币别
-                "PaymentMethod": "2",  # 支付方式：1-支付宝2-微信支付3-通联支付4-快钱支付
+                "PaymentMethod": "2",  # 支付方式：1-支付宝2-微信支付3-通联支付4-快钱支付5-银行卡6-优惠券7-其它：线下结算8-翼支付9-宝付
                 "MerchantOrderNum": RandomStr().create(),  # 商户订单号（钱包侧给到微信/支付宝的订单号）
-                "PaymentFlowNum": RandomStr().create(),    # (非必填)
+                "PaymentFlowNum": RandomStr().create(),  # (非必填)
                 # 说明：1、“支付流水号”为微信支付宝自动生成的（微信支付单号/支付宝交易号）2、“商户退款订单号”为钱包侧给到微信支付宝的（商户退款单号/退款请求号）
                 "BusinessType": "1",  # 业务类型：1-支付，2-退保退费 , 3-批改退费
                 "PayTime": Time(),  # 支付退费时间

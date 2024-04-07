@@ -24,7 +24,7 @@ class Insure:
             "Data": {
                 "ApplyPolicyRef": "P00420320231122853506498583535",  # 投保单号
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水唯一
-                "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
+                "PaymentMethod": "2",  # 支付方式(1-支付宝2-微信支付3-通联支付4-快钱支付5-银行卡6-优惠券7-其它：线下结算8-翼支付9-宝付)
                 "Currency": "CNY",  # 币种
                 "TotalPremium": "100",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
                 "PaymentDate": Time()  # 支付时间
