@@ -311,4 +311,3 @@ if __name__ == '__main__':
         print(newIdNum(1998, 1, 7, "男"))  # 随机生成身份证
 
     # print(Time(), Time(), TomorrowPresently(90))
-    print(datetime.timedelta(days=+1))
