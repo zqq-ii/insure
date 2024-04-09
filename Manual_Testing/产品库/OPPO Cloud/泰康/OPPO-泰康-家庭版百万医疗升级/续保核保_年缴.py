@@ -2,7 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, newIdNum, \
+    Birthday
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
@@ -24,7 +25,7 @@ class Renew_insurance:
             "Data": {
                 "Policy": {
                     "OriginalPolicyRef": "H231228446796590113513",  # 原保单号
-                    "AgencyPolicyRef":  RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "1019A05G01",  # 续保计划码
                     "IssueDate": Time(),  # 出单时间
                     "EffectiveDate": Tomorrow(),  # 生效时间               注:本产品支持次日零时生效或T+30生效
@@ -43,7 +44,7 @@ class Renew_insurance:
                     "PHIdType": "01",
                     # 证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
                     "PHIdNumber": "640423199801071789",  # 证件号
-                    "PHBirthDate": "19980107000000",  # 出生日期
+                    "PHBirthDate": Birthday("640423199801071789"),  # 出生日期
                     "PHTelephone": "13410506136",  # 手机号
                     "SocialSecurityFlag": "0"  # 有无社保 (0无1有)
                 },
@@ -56,7 +57,7 @@ class Renew_insurance:
                         "IdType": "01",
                         # 证件类型证件类型01居民身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他) 特殊说明下必传
                         "IdNumber": "640423199801071789",  # 证件号
-                        "BirthDate": "19980107000000",  # 出生日期
+                        "BirthDate": Birthday("640423199801071789"),  # 出生日期
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "PolicyholderInsuredRelation": "01",
                         # 被保人与投保人关系(01本人,02配偶,03丈夫,04妻子,05儿子,06女儿,07儿女,08父母,09父亲,10母亲) 投保类型为2时不传
