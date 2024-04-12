@@ -43,7 +43,7 @@ class One_order:
                 },
                 "PolicyHolder": {
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
-                    "PolicyHolderName": "李浩",  # 用户姓名（企业、公司名称）
+                    "PolicyHolderName": Nickname(),  # 用户姓名（企业、公司名称）
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)

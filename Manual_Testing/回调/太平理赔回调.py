@@ -23,7 +23,9 @@ class Status_callback:
                 "nonce": "192bf9ccebc5431c8e19a1a2f9e26612", "version": "1.0.1", "timestamp": "1709550359331"}
 
         return SendMethod.post_json(url=request_url, json=body)
-# 1-审核通过(单证齐全),2-单证退回,3-核赔通过,4-核赔退回,5-支付成功,6-支付失败
+
+
+# status和reason: 1-审核通过(单证齐全),2-单证退回,3-核赔通过,4-核赔退回,5-支付成功,6-支付失败
 
 if __name__ == "__main__":
     sys.stdout = Logger()

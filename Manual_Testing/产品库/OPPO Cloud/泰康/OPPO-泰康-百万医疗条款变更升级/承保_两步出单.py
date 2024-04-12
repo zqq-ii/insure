@@ -22,11 +22,11 @@ class Insure:
         request_url = self.host + url
         body = {
             "Data": {
-                "ApplyPolicyRef": "P00420520240227674935249461758",  # 投保单号
+                "ApplyPolicyRef": "P00420320240411512470279011491",  # 投保单号
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水唯一
                 "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
                 "Currency": "CNY",  # 币种
-                "TotalPremium": "53.40",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
+                "TotalPremium": "764",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
                 "PaymentDate": Time() # 支付时间
             },
             "ChannelCode": self.ChannelCode,

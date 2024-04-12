@@ -28,8 +28,8 @@ class Renewal:
                 "PaymentMethod": "2",  # 支付方式：1-支付宝；2-微信支付；3-通联支付；4-快钱支付
                 "PaymentFlowNum": RandomStr().create(),  # 支付流水号（第三方支付流水号）
                 "InstallmentNo": "2",  # 分期数整数(第几期)
-                "InstallmentPremium": "53.40",  # 分期产品，期次保费
-                "OriginalPolicyRef": "H240227127043550129758"  # 需要续期的保单号码
+                "InstallmentPremium": "44.90",  # 分期产品，期次保费
+                "OriginalPolicyRef": "H240411001439270183344"  # 需要续期的保单号码
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),
