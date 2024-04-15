@@ -65,7 +65,8 @@ def CustomRandomStr(custom="ZDY", length=13):
 def JsonFormatting(FormattingJson):
     """
     Json格式化
-    """  # ensure_ascii默认是True会将中文变为unicode编码
+    """
+    # ensure_ascii默认是True会将中文变为unicode编码
     JsonFormatting = json.dumps(FormattingJson, indent=4, ensure_ascii=False, separators=(',', ': '))
     return JsonFormatting
 
@@ -138,6 +139,7 @@ def Birthday(id_card=newIdNum()):
     month = id_card[10:12]
     day = id_card[12:14]
     return ("{}{}{}000000".format(year, month, day))
+
 
 def qwer(id_card):
     year = int(id_card[6:10])
