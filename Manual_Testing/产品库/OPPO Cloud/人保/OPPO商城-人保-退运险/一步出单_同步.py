@@ -87,7 +87,6 @@ class One_order:
             "RequestType": "0005",
             "Version": "1.0.0",
         }
-        # print(json.dumps(body, ensure_ascii=False))
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
 
 
