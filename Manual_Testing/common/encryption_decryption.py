@@ -57,7 +57,7 @@ class AES_DES:
                 res = eg.encrypt(text)
                 return "加密res:" + res
             else:
-                return f"注意task:0解密,1加密!"
+                return f"注意task:0-解密,1-加密!"
         except:
             return f"秘钥错误! 或 传入的text数据非文本!"
 

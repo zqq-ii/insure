@@ -22,7 +22,7 @@ class Claim_application:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "EP202403640000019368",  # 保单号
+                "PolicyNo": "EP202403640000019699",  # 保单号
                 "ReportOrderNo": RandomStr().create(),  # 报案订单号 (接口幂等字段)
                 "ReporterName": "彦祖",  # 报案人姓名
                 "ReporterPhone": "13410506136",  # 报案人联系电话
@@ -36,7 +36,7 @@ class Claim_application:
                 "ReportServiceCharge": "0.00",  # 报案服务费
                 "DamageDate": "20240322000000",  # 出险时间
                 "DamageDetail": "测试单,反正就是坏了!",  # 出险详细经历（包括故障原因）
-                "MaterialList": ["O8563832357770559538","O8563832357770559539"],  # 理赔材料Id列表 [“543534534”,”4324234234”]
+                # "MaterialList": ["O8575020403979272203","O8575020403979272204"],  # 理赔材料Id列表 [“543534534”,”4324234234”]
                 "RepairCompleteDate": "20240325000000",  # 维修完成时间
                 "Reserve1": "CN097013"  # 保留字段1（网点编码）
             },

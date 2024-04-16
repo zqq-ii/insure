@@ -8,7 +8,9 @@ from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
-
+"""
+太平需要支持上传两张材料
+"""
 class Material_upload:
     def __init__(self):
         self.environment = Environment

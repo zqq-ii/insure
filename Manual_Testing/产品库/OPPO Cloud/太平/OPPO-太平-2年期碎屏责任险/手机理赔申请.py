@@ -36,7 +36,7 @@ class Claim_application:
                 "ReportServiceCharge": "50",  # 报案服务费
                 "DamageDate": "20240118150000",  # 出险时间
                 "DamageDetail": "测试单,反正就是坏了!",  # 出险详细经历（包括故障原因）
-                "MaterialList": ["O8329363873968398426"],  # 理赔材料Id列表 [“543534534”,”4324234234”]
+                # "MaterialList": ["O8329363873968398426"],  # 理赔材料Id列表 [“543534534”,”4324234234”]
                 "RepairCompleteDate": "20240119150000",  # 维修完成时间
                 "Reserve1": "CN097013"  # 保留字段1（网点编码）
             },
