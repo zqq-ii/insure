@@ -141,15 +141,6 @@ def Birthday(id_card=newIdNum()):
     return ("{}{}{}000000".format(year, month, day))
 
 
-def qwer(id_card):
-    year = int(id_card[6:10])
-    month = int(id_card[10:12])
-    day = int(id_card[12:14])
-    birth_date = datetime.date(year, month, day)
-    age = datetime.date.today().year - birth_date.year
-    return age
-
-
 def Nickname():
     """随机生成姓名"""
     surname_list = RandomData.surname_list  # 姓
@@ -243,6 +234,7 @@ def SeveralMonths(day=1, month=1):
 def SeveralYears(day=1, year=1):
     """
     (距今某年后最后某天截止时间;可用于保单失效期)
+    截止时间是2月时有点问题(待优化)
     1,注意失效时间如果在2月份,2月小于29天时传入的最大天数为29;
     2,例:T+30场景,失效在2月该2月最大28天,那么这里传入的应该就是29
     """
