@@ -6,6 +6,10 @@ from Manual_Testing.common.operation_config import Config
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.Environment import Environment
 
+"""
+太平门店一切险: TP2023051101
+太平门店公责险: TP2023051102
+"""
 config = Config("config.ini")
 RandomZ = RandomStr().create()
 
