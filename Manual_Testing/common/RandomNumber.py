@@ -179,16 +179,16 @@ def BankCard():
     return card_id
 
 
-# 随机生成企业名称
 def EnterpriseName():
+    """随机生成企业名称"""
     prefix = ['ABC', 'XYZ', 'ACME', 'BEST', 'TOP']
     suffix = ['Corp', 'Inc', 'Ltd', 'LLC']
     return random.choice(prefix) + ' ' + random.choice(string.ascii_uppercase) + random.choice(
         string.ascii_lowercase) + ' ' + random.choice(suffix)
 
 
-# 随机生成统一社会信用代码
 def CreditCode():
+    """随机生成统一社会信用代码"""
     letters = string.ascii_uppercase + string.digits
     return ''.join(random.choice(letters) for i in range(18))
 
