@@ -22,7 +22,7 @@ class Pure_contract_link:
         request_url = self.host + url
         body = {
             "Data": {
-                "ApplyPolicyRef": "P00420520240131243039312437292",  # 投保单号
+                "ApplyPolicyRef": "P00420320240422136957287040292",  # 投保单号
                 "PlatformType": "WAP",  # 支付平台类型：WAP — WAP端支付(浏览器打开，拉起微信或支付签约)
                 "SuccessUrl": "https://www.taikang.com/product.html",  # 签约成功跳转链接
                 "DeductConfig": {  # 扣费配置（当支付平台类型为WAP端支付时必传）
