@@ -2,18 +2,19 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralDays, Time, newIdNum, \
-    Birthday, Mailbox, Nickname
+from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, newIdNum, \
+    Birthday, Mailbox, Nickname, Mobilephone
 from Manual_Testing.Environment import Environment
 from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
-产品码:KS20220419
-计划代码:KS2022041901
+产品码:KS20240423F
+计划代码:KS20240423F04
 """
-Nickname = Nickname()
 newIdNum = newIdNum(1998, 1, 7, "女")
+Nickname = Nickname()
+Mobilephone = Mobilephone()
 
 
 class One_order:
@@ -31,15 +32,15 @@ class One_order:
             "Data": {
                 "Policy": {
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
-                    "PlanCode": "KS2022041901",  # 计划代码
+                    "PlanCode": "KS20240423F04",  # 计划代码
                     "IssueDate": Time(),  # 出单时间
                     "EffectiveDate": Tomorrow(),  # 生效时间
-                    "ExpireDate": SeveralDays(90),  # 失效时间
+                    "ExpireDate": SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "TotalPremium": "0",  # 总保费
                     "Currency": "CNY",  # 币别
                     "PaymentType": "4",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "FaceAmount": "1500000.00",  # 保额,注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
+                    "FaceAmount": "0.00",  # 保额,注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "ResponsibilityList": None  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
                 },
                 "PolicyHolder": {
@@ -48,7 +49,7 @@ class One_order:
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",  # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                     "PHIdNumber": newIdNum,  # 证件号
-                    "PHTelephone": "13410506136",  # 手机号（投保人类型为2-企业时非必填）
+                    "PHTelephone": Mobilephone,  # 手机号（投保人类型为2-企业时非必填）
                     "PHBirthDate": Birthday(newIdNum),  # 出生日期 （投保人类型为2-企业时非必填）
                     "PHEmail": Mailbox(),  # 邮箱
                     "PHAddress": "深圳市",  # 详细地址
@@ -64,7 +65,7 @@ class One_order:
                         "IdType": "01",
                         # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                         "IdNumber": newIdNum,  # 证件号
-                        "Mobile": None,  # 手机号
+                        "Mobile": Mobilephone,  # 手机号
                         "BirthDate": Birthday(newIdNum),  # 出生日期
                         "Email": Mailbox(),  # 邮箱
                         "ResideAddress": None,  # 详细地址
