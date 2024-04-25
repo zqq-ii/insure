@@ -3,7 +3,7 @@ import sys
 
 
 class Logger(object):
-    def __init__(self, filename='..\ResponseLog.js', stream=sys.stdout):
+    def __init__(self, filename='.\ResponseLog.js', stream=sys.stdout):
         self.terminal = stream
         self.log = open(filename, 'a', encoding='utf-8')
 
