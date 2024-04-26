@@ -4,7 +4,6 @@ import json, sys
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
@@ -23,6 +22,5 @@ class Status_callback:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
     Res = Status_callback().Status_callback()
     print(f'[{Execution_Time()}]\n{Res}')
