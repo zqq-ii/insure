@@ -31,7 +31,6 @@ class Status_callback:
                 "urQ1GwjRj8zJINi9JxVs64GQUH5uT7/AhbvoKrCDuyU4rN/UFzzYFQJNhBBsAQDVQp57GnRLPj8XfrBf1IiKHD9neJigltRioK"
                 "gzMD/yNuHAkj4sVNEZnX8t0IYWTe5O2aSvLBHtPU4y1oq55p3PZZ1dbR/BBF89zV9sGoAo5JyPUweuOuL2W8dR91FndiggMkxB"
                 "F7ZAg+1A== ")
-
         return SendMethod.post_data(url=request_url, data=body)
 
 

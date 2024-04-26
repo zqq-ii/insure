@@ -86,7 +86,6 @@ class Refund_sales:
             "service_id": "01",
             "sign": "6c1fa630777cd441e33a683403a980d9"
         }
-
         return SendMethod.post_json(url=request_url, json=body)
 
 

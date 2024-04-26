@@ -110,7 +110,6 @@ class Order_callback:
                 "channelCode": "086000001042"
             }
         }
-
         return SendMethod.post_json(url=request_url, json=body)
 
 

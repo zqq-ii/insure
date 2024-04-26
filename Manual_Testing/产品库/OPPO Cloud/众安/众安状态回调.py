@@ -20,7 +20,6 @@ class Status_callback:
             "0aMckP7WBgJXrEul7285gDewOe9b/2rr3fTlHE5tJaaVRELAOOfSSBGcPnaJqlANoGhca8u3UsSNCUfUo3N/K+fdB2iW2Qj7+sbei+u3i1"
             "PH+ImZezkOJgoFpBp09VRnrlkRtJz4NMLvm6K0ZQIVfJ2eEAERl19HexiaiGWDmh94jHl4vzBE9+I7SG/Tf0a7A67vnIWg9d8hLGFe8a03"
             "LmZ0iuMpWTp6/QevA5JX+AfoiqTjnUNQVoh15ED53hiw")
-
         return SendMethod.post_jsonx(url=request_url, json=body)
 
 
