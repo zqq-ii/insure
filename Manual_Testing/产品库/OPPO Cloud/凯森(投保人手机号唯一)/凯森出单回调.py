@@ -18,12 +18,12 @@ class Status_callback:
         url = "/issuingmc/channelopenapi/ks20220420/policy/callback"
         request_url = self.host + url
         body = {
-            "extId": "B8602218267201454262",  # 业务单号
+            "extId": "B8602218267201454410",  # 业务单号
             "msg": "成功",  # 返回信息
-            "policyNo": "",  # 保单号
+            "policyNo": "EP202404251054866661",  # 保单号
             "status": "0",  # 状态(成功：0失败：1未知：2)
-            "product": "WDDE10",  # 产品编码
-            "inid": "1"  # 保司编码
+            "product": "1304104136",  # 产品编码
+            "inid": "15"  # 保司编码
         }
         return SendMethod.post_jsonx(url=request_url, json=body)
 

@@ -48,7 +48,7 @@ class Order_callback:
             "njaR/hFwc9yVEZWjNuQB9OJ9y99IveGtGL/zQZmUykh3D7gBG9ahjXscE9gtzhsU4HMBV7yWX/e2eP5gnZ2fNo6cfTRBmPlGqVwsePF06"
             "58oDiXOWuJVtaxEyt/MvChw8puqDizJTZSDeo5+zaoG9dEdNPoJ08KXE2jN+Q==")
 
-        return SendMethod.post_json(url=request_url, json=body)
+        return SendMethod.post_data(url=request_url, data=body)
 
 
 if __name__ == "__main__":

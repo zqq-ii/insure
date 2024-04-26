@@ -33,7 +33,7 @@ class Status_callback:
                 "gzMD/yNuHAkj4sVNEZnX8t0IYWTe5O2aSvLBHtPU4y1oq55p3PZZ1dbR/BBF89zV9sGoAo5JyPUweuOuL2W8dR91FndiggMkxB"
                 "F7ZAg+1A== ")
 
-        return SendMethod.post_json(url=request_url, json=body)
+        return SendMethod.post_data(url=request_url, data=body)
 
 
 if __name__ == "__main__":

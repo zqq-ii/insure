@@ -24,7 +24,7 @@ class Payment_callback:
                 "Uim896B9IJQAUDe8DZ19m3fNGQb7qWatwr/qiWUuQnFK+/jmZvSfX09aNkucyg7PVu7kflSvM8nDphaHD70z3QPXIYv3d2OVF6iob"
                 "RiHbJ1XUlVKm7fSLLIrv0cbrCvV3PkZ9j0AS4tBtYlWQPgC7U0sy+ECLq4g5JB1+ZGsFfHO/Y ")
 
-        return SendMethod.post_json(url=request_url, json=body)
+        return SendMethod.post_data(url=request_url, data=body)
 
 
 if __name__ == "__main__":
