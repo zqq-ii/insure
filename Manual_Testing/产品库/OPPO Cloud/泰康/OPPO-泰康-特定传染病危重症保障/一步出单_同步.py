@@ -31,7 +31,7 @@ class One_order:
                     "PlanCode": "TK2022122004",  # 计划代码
                     "IssueDate": Time(),  # 出单时间
                     "EffectiveDate": Tomorrow(),  # 生效时间
-                    "ExpireDate": SeveralDays(),  # 失效时间
+                    "ExpireDate": SeveralDays(30),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "TotalPremium": "0",  # 总保费
                     "Currency": "CNY",  # 币别
