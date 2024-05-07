@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
@@ -23,7 +22,7 @@ class Synchronize_logout:
         body = {
             "Data": {
                 "PolicyRef": "10560006600504973532",  # 保单号
-                "CancelDate":"20240109173808",  # 注销申请时间
+                "CancelDate": "20240109173808",  # 注销申请时间
                 "RefundPremium": None,  # 注销金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种
                 "Type": None,  # 注销类型： 正常注销 - NORMAL ，协商注销 - NEGOTIATE

@@ -2,9 +2,9 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears,Time,Birthday,newIdNum
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Birthday, newIdNum, \
+    Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -12,7 +12,8 @@ config = Config("config.ini")
 年缴:TK2024011701,月缴:TK2024011702
 原:百万魔方续保(标准版),在该产品续保;魔方百万(人工降级版)标准版
 """
-newIdNum = newIdNum(1998,1,7)
+newIdNum = newIdNum(1998, 1, 7)
+
 
 class JKX_underwriting:
     def __init__(self):

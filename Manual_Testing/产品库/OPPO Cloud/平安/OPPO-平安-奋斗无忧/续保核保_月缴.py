@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
@@ -25,7 +24,7 @@ class Renew_insurance:
                 "Policy": {
                     "OriginalPolicyRef": "10560006600519466884",  # 原保单号
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
-                    "PlanCode": "PINGAN2021090202", # 续保计划码
+                    "PlanCode": "PINGAN2021090202",  # 续保计划码
                     "IssueDate": "20241226235959",  # 出单时间
                     "EffectiveDate": "20241227000000",  # 生效时间
                     "ExpireDate": "20251226235959",  # 失效时间

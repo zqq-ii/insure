@@ -2,10 +2,9 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, newIdNum, \
-    Birthday,Nickname
+from Manual_Testing.common.communal import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, newIdNum, \
+    Birthday, Nickname, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -16,6 +15,7 @@ config = Config("config.ini")
 """
 Nickname = Nickname()
 newIdNum = newIdNum(1998, 1, 7, "男")
+
 
 class JKX_underwriting:
     def __init__(self):

@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
@@ -27,7 +26,7 @@ class Insure:
                 "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
                 "Currency": "CNY",  # 币种
                 "TotalPremium": "764.00",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
-                "PaymentDate": Time() # 支付时间
+                "PaymentDate": Time()  # 支付时间
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": RandomStr().create(),

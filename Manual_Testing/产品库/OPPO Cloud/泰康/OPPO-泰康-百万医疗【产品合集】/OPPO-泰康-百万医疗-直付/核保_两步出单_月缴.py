@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -12,6 +11,7 @@ config = Config("config.ini")
 计划码：标准版:TK202301170102,降级版:TK202301170202
 注:当前新系统只对接了标准版
 """
+
 
 class JKX_underwriting:
     def __init__(self):

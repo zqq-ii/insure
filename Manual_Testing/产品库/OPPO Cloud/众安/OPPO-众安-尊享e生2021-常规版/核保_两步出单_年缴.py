@@ -2,10 +2,9 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, newIdNum, \
-    Birthday
+from Manual_Testing.common.communal import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, newIdNum, \
+    Birthday, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -13,7 +12,8 @@ config = Config("config.ini")
 计划代码:年缴:ZAN2021071301,均期月缴:ZAN2021071303
 月缴:ZAN2021071302,未配置
 """
-newIdNum = newIdNum(1998,1,7)
+newIdNum = newIdNum(1998, 1, 7)
+
 
 class JKX_underwriting:
     def __init__(self):

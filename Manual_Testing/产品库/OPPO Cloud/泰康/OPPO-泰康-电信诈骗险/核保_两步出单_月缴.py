@@ -2,15 +2,15 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears,Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
 产品码：TK20231009
 计划码：年缴:TK2023100901,月缴:TK2023100902
 """
+
 
 class JKX_underwriting:
     def __init__(self):
@@ -44,7 +44,7 @@ class JKX_underwriting:
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
                     "PolicyHolderName": "王麻子",  # 用户姓名/企业名
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
-                    "PHIdType": "01",# 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
+                    "PHIdType": "01",  # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                     "PHIdNumber": "532529199801079748",  # 证件号/企业编号
                     "PHBirthDate": "19980107000000",  # 出生日期 投保类型为2不传
                     "PHTelephone": "13479245685",  # 手机号 投保类型为2非必传

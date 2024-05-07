@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time, Tomorrow, SeveralYears,Execution_Time
+from Manual_Testing.common.communal import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -63,7 +62,7 @@ class Renew_insurance:
                         "IdNumber": "610202199801079141",  # 证件号
                         "BirthDate": "19980107000000",  # 出生日期
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
-                        "PolicyholderInsuredRelation": "01",# 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
+                        "PolicyholderInsuredRelation": "01",  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
                         "UnderwritingType": "0",  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是
                         "SocialSecurityFlag": "0"  # 有无社保 (0无1有)
                     }

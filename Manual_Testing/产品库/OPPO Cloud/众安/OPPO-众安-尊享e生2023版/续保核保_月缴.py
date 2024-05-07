@@ -2,13 +2,14 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time,Execution_Time
+from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
 "保司,测试环境续保需要手动生成续保资质"
+
+
 class Renew_insurance:
     def __init__(self):
         self.environment = Environment
@@ -25,7 +26,7 @@ class Renew_insurance:
                 "Policy": {
                     "OriginalPolicyRef": "IH1100014625870533",  # 原保单号
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
-                    "PlanCode": "ZAN2022122702",   # 续保计划代码
+                    "PlanCode": "ZAN2022122702",  # 续保计划代码
                     "IssueDate": "20231214235959",  # 出单时间
                     "EffectiveDate": "20231215000000",  # 生效时间
                     "ExpireDate": "20241214235959",  # 失效时间
@@ -63,7 +64,7 @@ class Renew_insurance:
                         "SocialSecurityFlag": "0"  # 有无社保 (0无1有)
                     }
                 ],
-                "InstallmentList": [    # 分期信息列表，缴费方式为月缴PaymentType=2时必填
+                "InstallmentList": [  # 分期信息列表，缴费方式为月缴PaymentType=2时必填
                     {
                         "InstallmentNum": "12",  # 分期数，如月缴12期
                         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1

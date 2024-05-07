@@ -2,10 +2,9 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time, Execution_Time, Nickname, \
-    newIdNum, Birthday,SeveralYears,Tomorrow
+from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Nickname, \
+    newIdNum, Birthday, SeveralYears, Tomorrow, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """

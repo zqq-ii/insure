@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time,Tomorrow,SeveralYears,Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -69,7 +68,7 @@ class JKX_underwriting:
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
                         "ResideAddress": None,  # 详细地址
-                        "PolicyholderInsuredRelation": "01",# 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
+                        "PolicyholderInsuredRelation": "01",  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
                         "SocialSecurityFlag": "0",  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
                         "UnderwritingType": "0",  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是 投保类型为2时不传
                         "UnderwritingQuestionList": None,  # 智能核保问卷(智能核保问卷部分是时必填 ) 投保类型为2时不传

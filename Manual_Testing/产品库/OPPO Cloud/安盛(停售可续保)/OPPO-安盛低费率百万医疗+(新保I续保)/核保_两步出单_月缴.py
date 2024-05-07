@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -15,6 +14,7 @@ config = Config("config.ini")
 产品码：AS2023021604
 计划码：尊贵款基础版年缴:AS20230216040101,尊贵款基础版月缴:AS20230216040102;尊贵款+特械年缴:AS20230216040201,尊贵款+特械月缴:AS20230216040202
 """
+
 
 class JKX_underwriting:
     def __init__(self):

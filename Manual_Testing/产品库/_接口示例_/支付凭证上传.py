@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Time,Execution_Time
+from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
@@ -33,7 +32,8 @@ class Pay_voucher:
                     {
                         "FileName": "支付凭证.jpg",  # 带后缀名称的文件名
                         "FileType": "FILE_URL",  # 文件类型，FILE_URL 文件url；BASE64，base64编码格式
-                        "Data": "https://ts1.cn.mm.bing.net/th/id/R-C.69570f49f6f2567035b26ee26ab327d0?rik=%2fuDc6mLtfp7i4w&riu=http%3a%2f%2fwww.siwuprint.com%2fupsmb%2f201512%2f2015122321562514666.JPG&ehk=U%2bYrhAth%2fD8G08fLR%2fmC7doRr8zsNlXlWIPMRvAXIb4%3d&risl=&pid=ImgRaw&r=0"  # 文件地址
+                        "Data": "https://ts1.cn.mm.bing.net/th/id/R-C.69570f49f6f2567035b26ee26ab327d0?rik=%2fuDc6mLtfp7i4w&riu=http%3a%2f%2fwww.siwuprint.com%2fupsmb%2f201512%2f2015122321562514666.JPG&ehk=U%2bYrhAth%2fD8G08fLR%2fmC7doRr8zsNlXlWIPMRvAXIb4%3d&risl=&pid=ImgRaw&r=0"
+                        # 文件地址
                     }
             },
             "ChannelCode": self.ChannelCode,

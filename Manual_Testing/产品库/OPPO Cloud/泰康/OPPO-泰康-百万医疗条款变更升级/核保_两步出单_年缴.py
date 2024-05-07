@@ -2,9 +2,9 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears,Time,newIdNum,Birthday
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, newIdNum, Birthday, \
+    Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -12,7 +12,8 @@ config = Config("config.ini")
 年缴:TK2024011701,月缴:TK2024011702
 原:百万魔方续保(标准版),在该产品续保;魔方百万(人工降级版)标准版
 """
-newIdNum = newIdNum(1998,1,7)
+newIdNum = newIdNum(1998, 1, 7)
+
 
 class JKX_underwriting:
     def __init__(self):
@@ -31,7 +32,7 @@ class JKX_underwriting:
                     "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TK2024011701",  # 计划代码
                     "IssueDate": "20230410165130",  # 出单时间
-                    "EffectiveDate":"20230411000000",  # 生效时间
+                    "EffectiveDate": "20230411000000",  # 生效时间
                     "ExpireDate": "20240410235959",  # 失效时间     # 注(保单未失效,续保前需要现在数据库修改有效期后再续保)
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型

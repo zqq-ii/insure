@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests, json
 from Manual_Testing.common.encryption_decryption import EncryptDate
-from Manual_Testing.common.RandomNumber import JsonFormatting
+from Manual_Testing.common.communal import JsonFormatting
 
 
 class SendMethod:

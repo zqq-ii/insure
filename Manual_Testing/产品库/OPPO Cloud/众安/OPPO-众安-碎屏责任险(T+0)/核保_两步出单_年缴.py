@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -46,7 +45,7 @@ class SJX_Underwriting:
                     "PolicyHolderType": "2",  # 投保人类型1-个人2-企业或者机构
                     "PolicyHolderName": "深圳市欢太数字科技有限公司",  # 用户姓名/企业名
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
-                    "PHIdType": "09",# 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
+                    "PHIdType": "09",  # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                     "PHIdNumber": "91440300MA5FBC2T2F",  # 证件号/企业编号
                     "PHBirthDate": None,  # 出生日期 投保类型为2不传
                     "PHTelephone": None,  # 手机号 投保类型为2非必传
@@ -66,7 +65,7 @@ class SJX_Underwriting:
                         "Mobile": None,  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
                         "ResideAddress": None,  # 详细地址
-                        "PolicyholderInsuredRelation": None,# 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
+                        "PolicyholderInsuredRelation": None,  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
                         "SocialSecurityFlag": None,  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
                         "UnderwritingType": None,  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是 投保类型为2时不传
                         "UnderwritingQuestionList": None,  # 智能核保问卷(智能核保问卷部分是时必填 ) 投保类型为2时不传

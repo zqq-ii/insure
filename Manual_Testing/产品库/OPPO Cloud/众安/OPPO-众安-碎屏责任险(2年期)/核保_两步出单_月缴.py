@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Tomorrow, SeveralYears,Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -32,7 +31,7 @@ class SJX_Underwriting:
                     "PlanCode": "ZAN2024022002",  # 计划代码
                     "IssueDate": Time(),  # 出单时间
                     "EffectiveDate": Tomorrow(day=8),  # 生效时间               # 注:T+8,(测试环境支持倒签)
-                    "ExpireDate": SeveralYears(day=8,year=2),  # 失效时间
+                    "ExpireDate": SeveralYears(day=8, year=2),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴

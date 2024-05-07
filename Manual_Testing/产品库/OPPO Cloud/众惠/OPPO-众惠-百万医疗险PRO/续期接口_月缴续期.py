@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Execution_Time, Time
+from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 
@@ -22,8 +21,8 @@ class Renewal:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef":"TenSerfZGaobuuya",
-                "PlanCode":"ZH2024032502",
+                "AgencyPolicyRef": "TenSerfZGaobuuya",
+                "PlanCode": "ZH2024032502",
                 "PaymentDate": "20240621235959",  # 支付完成时间
                 "Currency": "CNY",  # 币别
                 "PaymentMethod": "2",  # 支付方式：1-支付宝；2-微信支付；3-通联支付；4-快钱支付

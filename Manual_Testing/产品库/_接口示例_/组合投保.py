@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import json, sys
-from Manual_Testing.common.PrintData import Logger
-from Manual_Testing.common.RandomNumber import RandomStr, Time, Tomorrow, SeveralYears,Execution_Time
+from Manual_Testing.common.communal import RandomStr, Time, Tomorrow, SeveralYears, Execution_Time, Logger
 from Manual_Testing.common.operation_config import Config
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.Environment import Environment
@@ -150,5 +149,3 @@ if __name__ == "__main__":
     sys.stdout = Logger()
     Res = Joint_Investment().Joint_Investment()
     print(f'[{Execution_Time()}]\n{Res}')
-
-

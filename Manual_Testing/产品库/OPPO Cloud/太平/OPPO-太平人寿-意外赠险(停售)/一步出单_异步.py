@@ -2,10 +2,9 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr, Mobilephone, Execution_Time, SeveralMonths, Mailbox, Tomorrow, \
-    newIdNum, Birthday, Time,Nickname
+from Manual_Testing.common.communal import RandomStr, Mobilephone, Execution_Time, SeveralMonths, Mailbox, Tomorrow, \
+    newIdNum, Birthday, Time, Nickname, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
@@ -15,6 +14,7 @@ config = Config("config.ini")
 """
 newIdNum = newIdNum(1998, 1, 7)
 Nickname = Nickname()
+
 
 class One_order:
     def __init__(self):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from Manual_Testing.common import RandomData
-import time, datetime, random, string, json, calendar
+from Manual_Testing.common import pure_data
+import time, datetime, random, string, json, calendar,sys
 from dateutil.relativedelta import relativedelta
 
 
@@ -51,6 +51,29 @@ class RandomStr:
         return 'TENSER' + ''.join(str_list)
 
 
+class Logger(object):
+    """
+    保存响应数据
+    """
+
+    def __init__(self, filename='..\ResponseLog.js', stream=sys.stdout):
+        self.terminal = stream
+        self.log = open(filename, 'a', encoding='utf-8')
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
+
+
+# sys.stdout = Logger()
+# sys.stderr = Logger()
+
+# print("Hello World")
+
+
 def CustomRandomStr(custom="ZDY", length=13):
     """
     随机生成字符串(由大写字母,小写字母,数字组成)
@@ -81,7 +104,7 @@ def newIdNum(year=random.randint(1974, 2001), month=random.randint(1, 12), day=r
     :return:
     """
     while True:
-        codelist = RandomData.codelist  # 设置地区
+        codelist = pure_data.codelist  # 设置地区
         weight = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]  # 权重项
         checkcode = {'0': '1', '1': '0', '2': 'X', '3': '9', '4': '8', '5': '7', '6': '6', '7': '5', '8': '4', '9': '3',
                      '10': '2'}  # 校验码映射
@@ -143,8 +166,8 @@ def Birthday(id_card=newIdNum()):
 
 def Nickname():
     """随机生成姓名"""
-    surname_list = RandomData.surname_list  # 姓
-    name_list = RandomData.name_list  # 名
+    surname_list = pure_data.surname_list  # 姓
+    name_list = pure_data.name_list  # 名
     surname = random.choice(surname_list)
     name = random.choice(name_list)
     nickname = surname + name
@@ -154,7 +177,7 @@ def Nickname():
 def Mobilephone():
     """随机生成手机号"""
     phone = ''
-    phone += str(random.choice(RandomData.phone_number))
+    phone += str(random.choice(pure_data.phone_number))
     ran = ''
     for i in range(8):
         ran += str(random.randint(0, 9))

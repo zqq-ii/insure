@@ -2,15 +2,15 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.RandomNumber import RandomStr,Time, Execution_Time, Tomorrow, SeveralYears
+from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Tomorrow, SeveralYears, Logger
 from Manual_Testing.Environment import Environment
-from Manual_Testing.common.PrintData import Logger
 
 config = Config("config.ini")
 """
 产品码：TK20240122
 计划码：TK2024012202
 """
+
 
 class JKX_underwriting:
     def __init__(self):
