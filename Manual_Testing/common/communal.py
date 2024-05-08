@@ -97,11 +97,6 @@ def JsonFormatting(FormattingJson):
 def newIdNum(year=random.randint(1974, 2001), month=random.randint(1, 12), day=random.randint(1, 29), sex=None):
     """
     生成指定年,月,日,性别的身份证号码
-    :param birthyear: 年
-    :param birthmonth: 月
-    :param birthday: 日
-    :param sex: 性别
-    :return:
     """
     while True:
         codelist = pure_data.codelist  # 设置地区
