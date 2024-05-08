@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from Manual_Testing.common import pure_data
-import time, datetime, random, string, json, calendar,sys
+import time, datetime, random, string, json, calendar, sys
 from dateutil.relativedelta import relativedelta
 
 
@@ -53,7 +53,7 @@ class RandomStr:
 
 class Logger(object):
     """
-    保存响应数据
+    保存运行输出数据
     """
 
     def __init__(self, filename='..\ResponseLog.js', stream=sys.stdout):
