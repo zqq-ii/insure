@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 import json, sys
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.common.operation_config import Config
 from Manual_Testing.common.send_method import SendMethod
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 """
 太平门店一切险: TP2023051101
 太平门店公责险: TP2023051102
 """
 config = Config("config.ini")
-RandomZ = RandomStr().create()
+RandomZ = co.RandomStr().create()
 
 
 class Joint_Investment:
@@ -40,12 +40,12 @@ class Joint_Investment:
                     [
                         {
                             "Policy": {
-                                "AgencyPolicyRef": RandomStr().create(),  # 小保单第三方订单号
+                                "AgencyPolicyRef": co.RandomStr().create(),  # 小保单第三方订单号
                                 "PlanCode": "TP2023051101",  # 计划代码
                                 "GroupSize": "1",  # 被保人个数
-                                "IssueDate": Time(),  # 出单时间
-                                "EffectiveDate": Tomorrow(),  # 生效时间
-                                "ExpireDate": SeveralYears(),  # 失效时间
+                                "IssueDate": co.Time(),  # 出单时间
+                                "EffectiveDate": co.Tomorrow(),  # 生效时间
+                                "ExpireDate": co.SeveralYears(),  # 失效时间
                                 "PaymentType": "1",  # 缴费方式
                                 "Currency": "CNY",  # 币别
                                 "TotalPremium": "470.00",  # 保费
@@ -91,12 +91,12 @@ class Joint_Investment:
                         {
                             "Policy":
                                 {
-                                    "AgencyPolicyRef": RandomStr().create(),
+                                    "AgencyPolicyRef": co.RandomStr().create(),
                                     "PlanCode": "TP2023051102",
                                     "GroupSize": "1",
-                                    "IssueDate": Time(),  # 出单时间
-                                    "EffectiveDate": Tomorrow(),  # 生效时间
-                                    "ExpireDate": SeveralYears(),  # 失效时间
+                                    "IssueDate": co.Time(),  # 出单时间
+                                    "EffectiveDate": co.Tomorrow(),  # 生效时间
+                                    "ExpireDate": co.SeveralYears(),  # 失效时间
                                     "PaymentType": "1",
                                     "Currency": "CNY",
                                     "TotalPremium": "390.00",
@@ -150,6 +150,6 @@ class Joint_Investment:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Joint_Investment().Joint_Investment()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -21,16 +21,16 @@ class Renewal:
         request_url = self.host + url
         body = {
             "Data": {
-                "PaymentDate": Time(),  # 支付完成时间
+                "PaymentDate": co.Time(),  # 支付完成时间
                 "Currency": "CNY",  # 币别
                 "PaymentMethod": "2",  # 支付方式：1-支付宝；2-微信支付；3-通联支付；4-快钱支付
-                "PaymentFlowNum": RandomStr().create(),  # 支付流水号（第三方支付流水号）
+                "PaymentFlowNum": co.RandomStr().create(),  # 支付流水号（第三方支付流水号）
                 "InstallmentNo": "2",  # 分期数整数(第几期)
                 "InstallmentPremium": "12.80",  # 分期产品，期次保费
                 "OriginalPolicyRef": "PWCB20234403Q000L00013"  # 需要续期的保单号码
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0026",
             "Version": "1.0.0"
         }
@@ -38,6 +38,6 @@ class Renewal:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Renewal().Renewal()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,7 +22,7 @@ class SJX_Underwriting:
         body = {
             "Data": {
                 "Policy": {  # 保单信息
-                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "ZAN2023082301",  # 计划代码
                     "IssueDate": "20230222100723",  # 出单时间
                     "EffectiveDate": "20230222100723",  # 生效时间     # 注:改为出单实时生效,支持倒签
@@ -73,7 +73,7 @@ class SJX_Underwriting:
                         "ProductBrand": "01",  # 产品品牌：01(OPPO) 04(OnePlus) 05(realme)
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
-                        "ProductSerialNo": RandomStr().create(),  # 产品序列号
+                        "ProductSerialNo": co.RandomStr().create(),  # 产品序列号
                         "ActiveDate": "20230407000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "20000",  # 产品价格
                         "PurchaseChannel": None,  # 购买渠道(预留字段)
@@ -91,7 +91,7 @@ class SJX_Underwriting:
                 ]
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0006",
             "Version": "1.0.0"
         }
@@ -99,6 +99,6 @@ class SJX_Underwriting:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = SJX_Underwriting().SJX_Underwriting()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

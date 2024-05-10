@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -47,7 +47,7 @@ class Invoice_application:
                     }
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0049",
             "Version": "1.0.0"
         }
@@ -55,7 +55,6 @@ class Invoice_application:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
-    RandomZ = RandomStr().create()
+    sys.stdout = co.Logger()
     Res = Invoice_application().Invoice_application()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

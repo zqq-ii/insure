@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Time, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -37,7 +37,7 @@ class Pay_voucher:
                     }
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0050",
             "Version": "1.0.0"
         }
@@ -45,6 +45,6 @@ class Pay_voucher:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Pay_voucher().Pay_voucher()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,16 +22,16 @@ class Zh_Underwriting:
         body = {
             "Data":
                 {
-                    "ApplyPolicyRef": "ET202300000278633981",  # 大投保单号
+                    "ApplyPolicyRef": "ET202400025993000181",  # 大投保单号
                     "TotalPremium": "860.00",  # 保费
                     "Currency": "CNY",  # 币别
                     "PaymentMethod": "7",  # 支付方式
                     "FaceAmount": "2500000",  # 总保额，单位元
-                    "PaymentDate": Time(),  # 支付时间
-                    "PaymentFlowNum": RandomStr().create()  # 支付流水号,对公转账可为空
+                    "PaymentDate": co.Time(),  # 支付时间
+                    "PaymentFlowNum": co.RandomStr().create()  # 支付流水号,对公转账可为空
                 },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0048",
             "Version": "1.0.0"
         }
@@ -39,6 +39,6 @@ class Zh_Underwriting:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Zh_Underwriting().Zh_Underwriting()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')
