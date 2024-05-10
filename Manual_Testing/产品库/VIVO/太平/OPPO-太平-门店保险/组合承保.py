@@ -6,6 +6,7 @@ from Manual_Testing.Environment import Environment
 from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
+"""出单回调关键字:太平异步门店保出单回调原始数据"""
 
 
 class Zh_Underwriting:
@@ -22,7 +23,7 @@ class Zh_Underwriting:
         body = {
             "Data":
                 {
-                    "ApplyPolicyRef": "ET202400025993000181",  # 大投保单号
+                    "ApplyPolicyRef": "ET202400026272000181",  # 大投保单号
                     "TotalPremium": "860.00",  # 保费
                     "Currency": "CNY",  # 币别
                     "PaymentMethod": "7",  # 支付方式

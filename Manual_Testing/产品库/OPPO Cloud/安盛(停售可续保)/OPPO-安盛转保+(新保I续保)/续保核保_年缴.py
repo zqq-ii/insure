@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -25,7 +25,7 @@ class Renew_insurance:
             "Data": {
                 "Policy": {
                     "OriginalPolicyRef": "21010000H27230001530",  # 原保单号
-                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "AS202302160301",  # 计划代码  续保计划码(年:AS202302160301、月:AS202302160302)
                     "IssueDate": "20241117000000",  # 出单时间
                     "EffectiveDate": "20241118000000",  # 生效时间
@@ -74,7 +74,7 @@ class Renew_insurance:
                 # ]
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0032",
             "Version": "1.0.0"
         }
@@ -82,6 +82,6 @@ class Renew_insurance:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Renew_insurance().Renew_insurance()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

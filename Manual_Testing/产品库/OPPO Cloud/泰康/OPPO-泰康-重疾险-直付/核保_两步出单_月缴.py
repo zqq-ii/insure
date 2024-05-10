@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 """
@@ -27,11 +27,11 @@ class JKX_underwriting:
         body = {
             "Data": {
                 "Policy": {  # 保单信息
-                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TK202308183002",  # 计划代码;(TK202308181002;10w款,TK202308182002;20w款,TK202308183002;30w款)
-                    "IssueDate": Time(),  # 出单时间
-                    "EffectiveDate": Tomorrow(),  # 生效时间         注:该产品支持次日凌晨或T+30生效
-                    "ExpireDate": SeveralYears(),  # 失效时间
+                    "IssueDate": co.Time(),  # 出单时间
+                    "EffectiveDate": co.Tomorrow(),  # 生效时间         注:该产品支持次日凌晨或T+30生效
+                    "ExpireDate": co.SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -84,15 +84,14 @@ class JKX_underwriting:
                 ]
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0006",
             "Version": "1.0.0"
         }
-        # print(json.dumps(body, ensure_ascii=False))
         return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = JKX_underwriting().JKX_underwriting()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,7 +22,7 @@ class Surrender_trial:
         body = {
             "Data": {
                 "PolicyRef": "H231228446789390170715",  # 保单号
-                "CancelDate": Time(),  # 退保申请日期
+                "CancelDate": co.Time(),  # 退保申请日期
                 "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
             },
             "ChannelCode": self.ChannelCode,
@@ -34,6 +34,6 @@ class Surrender_trial:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Surrender_trial().Surrender_trial()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

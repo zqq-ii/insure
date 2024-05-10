@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,11 +22,11 @@ class Release_Notice:
         body = {
             "Data": {
                 "PolicyRef": "6688032023440380026076",  # 保单号
-                "EndorDate": Time(),  # 脱保日期
+                "EndorDate": co.Time(),  # 脱保日期
                 "EndorReason": "到期未交,给予脱保!"  # 脱保原因 (阳光百万医疗(计划码YG2021010701，YG2021010702)非必填,其余产品必填)
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0030",
             "Version": "1.0.0"
         }
@@ -34,6 +34,6 @@ class Release_Notice:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Release_Notice().Release_Notice()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

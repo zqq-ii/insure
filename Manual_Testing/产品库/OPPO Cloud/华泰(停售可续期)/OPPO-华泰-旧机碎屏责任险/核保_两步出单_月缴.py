@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 """
@@ -26,11 +26,11 @@ class SJX_Underwriting:
         body = {
             "Data": {
                 "Policy": {  # 保单信息
-                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "HT2022060802",  # 计划代码
-                    "IssueDate": Time(),  # 出单时间
-                    "EffectiveDate": Tomorrow(8),  # 生效时间
-                    "ExpireDate": SeveralYears(day=8),  # 失效时间
+                    "IssueDate": co.Time(),  # 出单时间
+                    "EffectiveDate": co.Tomorrow(8),  # 生效时间
+                    "ExpireDate": co.SeveralYears(day=8),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -78,7 +78,7 @@ class SJX_Underwriting:
                         "ProductBrand": "01",  # 产品品牌：01(OPPO) 04(OnePlus) 05(realme)
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
-                        "ProductSerialNo": RandomStr().create(),  # 产品序列号
+                        "ProductSerialNo": co.RandomStr().create(),  # 产品序列号
                         "ActiveDate": "20231001000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "265.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
@@ -96,7 +96,7 @@ class SJX_Underwriting:
                 ]
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0006",
             "Version": "1.0.0"
         }
@@ -104,6 +104,6 @@ class SJX_Underwriting:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = SJX_Underwriting().SJX_Underwriting()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

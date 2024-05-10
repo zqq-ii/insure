@@ -2,9 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, SeveralYears, Time, newIdNum, Birthday, \
-    Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 """
@@ -12,7 +11,7 @@ config = Config("config.ini")
 年缴:TK2024011701,月缴:TK2024011702
 原:百万魔方续保(标准版),在该产品续保;魔方百万(人工降级版)标准版
 """
-newIdNum = newIdNum(1998, 1, 7)
+newIdNum = co.newIdNum(1998, 1, 7)
 
 
 class JKX_underwriting:
@@ -29,7 +28,7 @@ class JKX_underwriting:
         body = {
             "Data": {
                 "Policy": {  # 保单信息
-                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TK2024011701",  # 计划代码
                     "IssueDate": "20230410165130",  # 出单时间
                     "EffectiveDate": "20230411000000",  # 生效时间
@@ -50,7 +49,7 @@ class JKX_underwriting:
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
                     "PHIdNumber": newIdNum,  # 证件号/企业编号
-                    "PHBirthDate": Birthday(newIdNum),  # 出生日期 投保类型为2不传
+                    "PHBirthDate": co.Birthday(newIdNum),  # 出生日期 投保类型为2不传
                     "PHTelephone": "13410506136",  # 手机号 投保类型为2非必传
                     "PHEmail": None,  # 邮箱
                     "PHAddress": None  # 详细地址
@@ -64,7 +63,7 @@ class JKX_underwriting:
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",  # 证件类型(参考附录 证件类型（个人）)投保类型为2不传
                         "IdNumber": newIdNum,  # 证件号/企业编号
-                        "BirthDate": Birthday(newIdNum),  # 出生日期 投保类型为2非必传
+                        "BirthDate": co.Birthday(newIdNum),  # 出生日期 投保类型为2非必传
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
                         "ResideAddress": None,  # 详细地址
@@ -86,7 +85,7 @@ class JKX_underwriting:
                 # ]
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0006",
             "Version": "1.0.0"
         }
@@ -94,6 +93,6 @@ class JKX_underwriting:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = JKX_underwriting().JKX_underwriting()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

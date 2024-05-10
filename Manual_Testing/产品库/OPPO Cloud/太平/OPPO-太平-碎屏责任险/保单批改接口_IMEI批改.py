@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 
 config = Config("config.ini")
@@ -23,12 +23,12 @@ class IMEI_correction:
         body = {
             "Data": {
                 "PolicyNo": "EP202403640076971016",  # 保单号
-                "ModifyNo": RandomStr().create(),  # 批改单号 (接口幂等字段)
+                "ModifyNo": co.RandomStr().create(),  # 批改单号 (接口幂等字段)
                 "OldProductSerialNo": "TenSerEV4DGSvxvg",  # 原序列号
                 "NewProductSerialNo": "TenSerEV4DGSvxvg1"  # 新序列号
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0045",
             "Version": "1.0.0"
         }
@@ -36,6 +36,6 @@ class IMEI_correction:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = IMEI_correction().IMEI_correction()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

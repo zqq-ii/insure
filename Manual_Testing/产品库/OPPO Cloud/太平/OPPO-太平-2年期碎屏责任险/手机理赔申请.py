@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,7 +22,7 @@ class Claim_application:
         body = {
             "Data": {
                 "PolicyNo": "EP202403640000006660",  # 保单号
-                "ReportOrderNo": RandomStr().create(),  # 报案订单号 (接口幂等字段)
+                "ReportOrderNo": co.RandomStr().create(),  # 报案订单号 (接口幂等字段)
                 "ReporterName": "彦祖",  # 报案人姓名
                 "ReporterPhone": "13410506136",  # 报案人联系电话
                 "ReportDate": "20240118150000",  # 报案时间
@@ -40,7 +40,7 @@ class Claim_application:
                 "Reserve1": "CN097013"  # 保留字段1（网点编码）
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0044",
             "Version": "1.0.0"
         }
@@ -48,6 +48,6 @@ class Claim_application:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Claim_application().Claim_application()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

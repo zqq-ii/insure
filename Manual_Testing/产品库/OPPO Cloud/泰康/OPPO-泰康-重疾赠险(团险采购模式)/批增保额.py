@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Tomorrow, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 """
@@ -34,15 +34,15 @@ class Increase_coverage:
                         "CorrectPremium": "0",  # 批增保费,赠险传0
                         "OriginalAmount": "10.00",  # 原有保额
                         "CorrectAmount": "990",  # 批增保额
-                        "CorrectNo": RandomStr().create(),  # 批单申请号,保证唯一
-                        "CorrectEffectiveDate": Tomorrow()  # 批单生效时间，T+1零点生效
+                        "CorrectNo": co.RandomStr().create(),  # 批单申请号,保证唯一
+                        "CorrectEffectiveDate": co.Tomorrow()  # 批单生效时间，T+1零点生效
                     },
                     "PlanCode": "TKG20240324F04",  # 计划代码
                     "PolicyRef": "6H2405DA3A2TNK6"  # 保单号
                 }
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0028",
             "Version": "1.0.0"
         }
@@ -50,6 +50,6 @@ class Increase_coverage:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Increase_coverage().Increase_coverage()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

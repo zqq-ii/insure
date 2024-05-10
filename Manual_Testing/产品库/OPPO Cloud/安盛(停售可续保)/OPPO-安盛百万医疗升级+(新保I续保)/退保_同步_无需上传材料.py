@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,14 +22,14 @@ class Synchronous_surrender:
         body = {
             "Data": {
                 "PolicyRef": "21010000H27230001577",  # 保单号
-                "CancelDate": Time(),  # 退保申请时间
+                "CancelDate": co.Time(),  # 退保申请时间
                 "CancelPremium": "443.66",  # 退保金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种
                 "Type": None,  # 退保类型： 正常退保 - NORMAL ，协商退保 - NEGOTIATE
                 "ReasonRemark": None,  # 退保原因
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0017",
             "Version": "1.0.0"
         }
@@ -37,6 +37,6 @@ class Synchronous_surrender:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Synchronous_surrender().Synchronous_surrender()
-    print(f'Execution_Time:{Execution_Time()}\n{Res}')
+    print(f'Execution_Time:{co.Execution_Time()}\n{Res}')

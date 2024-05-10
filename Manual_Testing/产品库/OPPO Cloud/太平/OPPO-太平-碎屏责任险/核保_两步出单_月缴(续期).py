@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 """
@@ -26,7 +26,7 @@ class SJX_Underwriting:
         body = {
             "Data": {
                 "Policy": {  # 保单信息
-                    "AgencyPolicyRef": RandomStr().create(),  # 第三方订单号
+                    "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TP2022031802",  # 计划代码   (普通款:TP2022031802)
                     "IssueDate": "20250217235959",  # 出单时间      (此产品测试环境可倒签)
                     "EffectiveDate": "20250218000000",  # 生效时间
@@ -94,7 +94,7 @@ class SJX_Underwriting:
                 # ]
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0006",
             "Version": "1.0.0"
         }
@@ -102,6 +102,6 @@ class SJX_Underwriting:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = SJX_Underwriting().SJX_Underwriting()
-    print(f'[{Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]\n{Res}')

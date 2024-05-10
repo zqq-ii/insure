@@ -2,8 +2,8 @@
 from Manual_Testing.common.operation_config import Config
 import json, sys
 from Manual_Testing.common.send_method import SendMethod
-from Manual_Testing.common.communal import RandomStr, Execution_Time, Time, Logger
 from Manual_Testing.Environment import Environment
+from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
 
@@ -22,14 +22,14 @@ class Synchronize_logout:
         body = {
             "Data": {
                 "PolicyRef": "21040000H27230013011",  # 保单号
-                "CancelDate": Time(),  # 注销申请时间
+                "CancelDate": co.Time(),  # 注销申请时间
                 "RefundPremium": "0",  # 注销金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种
                 "Type": None,  # 注销类型： 正常注销 - NORMAL ，协商注销 - NEGOTIATE
                 "ReasonRemark": "测试,注销",  # 注销原因
             },
             "ChannelCode": self.ChannelCode,
-            "RequestID": RandomStr().create(),
+            "RequestID": co.RandomStr().create(),
             "RequestType": "0015",
             "Version": "1.0.0"
         }
@@ -37,6 +37,6 @@ class Synchronize_logout:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger()
+    sys.stdout = co.Logger()
     Res = Synchronize_logout().Synchronize_logout()
-    print(f'时间:{Time()};安盛百万医疗升级:注销>{Res}')
+    print(f'时间:{co.Time()};安盛百万医疗升级:注销>{Res}')
