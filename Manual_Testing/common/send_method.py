@@ -32,6 +32,19 @@ class SendMethod:
             return result
 
     @staticmethod
+    def post_datax(url, data=None, headers=None):
+        try:
+            response = requests.post(url=url, data=data, headers=headers)
+            result = {}
+            result["StatusCode"] = response.status_code
+            result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
+            result["ResponseBody"] = response.text
+            return JsonFormatting(result)
+        except:
+            result = None
+            return result
+
+    @staticmethod
     def post_json(url, json=None, headers=None):
         try:
             response = requests.post(url=url, json=json, headers=headers)

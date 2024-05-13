@@ -23,7 +23,7 @@ class Zh_Underwriting:
         body = {
             "Data":
                 {
-                    "ApplyPolicyRef": "ET202400027586000181",  # 大投保单号
+                    "ApplyPolicyRef": "ET202400028972000181",  # 大投保单号
                     "TotalPremium": "860.00",  # 保费
                     "Currency": "CNY",  # 币别
                     "PaymentMethod": "7",  # 支付方式

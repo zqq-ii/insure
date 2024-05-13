@@ -21,16 +21,16 @@ class Invoice_application:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyNo": "EP202403202186000123",  # 保单号
+                "PolicyNo": "EP202403202429000123",  # 保单号
                 "InvoiceHead": "游点叼",  # 发票抬头
                 "TaxPayerNo": "1341050613611111",  # 纳税人识别号
                 "InvoiceAmount": "470.00",  # 开票金额
                 "Email": "1833247938@163.com",  # 邮箱
                 "PhoneNo": "134105061361",  # 手机号码
-                "InvoiceType": "1",  # 发票类型，1：电子发票2：纸质专用发票;
+                "InvoiceType": "2",  # 发票类型，1：电子发票2：纸质专用发票;
                 "OfflineInvoiceApply":  # 收件人，当选择纸质发票时必填该项，除发票类型外其他参数可不填
                     {
-                        "PolicyNo": "EP202403202186000123",  # 保单号
+                        "PolicyNo": "EP202403202429000123",  # 保单号
                         "InsuranceType": "游点叼",  # 险种名称
                         "PolicyHolderName": "吴三桂",  # 投保人名称
                         "InsuredName": "南山前海门店",  # 被保险人名称

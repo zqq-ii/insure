@@ -21,8 +21,8 @@ class Pay_voucher:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "TENSERTVAC4O121SXVT14Y4HS8PHTENK",  # 对应大订单号
-                "ApplyPolicyRef": "ET202400027352000181",  # 对应大投保单号
+                "AgencyPolicyRef": "TENSERAONBFQI6S629ZB3TKVPCASFU9R",  # 对应大订单号
+                "ApplyPolicyRef": "ET202400028972000181",  # 对应大投保单号
                 "AccountName": "游点叼",  # 银行账户名称(非必填)
                 "BankAccountNo": "5154555659656565",  # 银行账号(非必填)
                 "BankName": "中国建设银行",  # 开户银行(非必填)
