@@ -21,8 +21,8 @@ class Pay_voucher:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "GeIZe9e9UIC6c4Va",  # 对应大订单号
-                "ApplyPolicyRef": "ET202300000160945045",  # 对应大投保单号
+                "AgencyPolicyRef": "TENSERTVAC4O121SXVT14Y4HS8PHTENK",  # 对应大订单号
+                "ApplyPolicyRef": "ET202400027352000181",  # 对应大投保单号
                 "AccountName": "游点叼",  # 银行账户名称(非必填)
                 "BankAccountNo": "5154555659656565",  # 银行账号(非必填)
                 "BankName": "中国建设银行",  # 开户银行(非必填)
@@ -32,7 +32,7 @@ class Pay_voucher:
                     {
                         "FileName": "支付凭证.jpg",  # 带后缀名称的文件名
                         "FileType": "FILE_URL",  # 文件类型，FILE_URL 文件url；BASE64，base64编码格式
-                        "Data": "https://ts1.cn.mm.bing.net/th/id/R-C.69570f49f6f2567035b26ee26ab327d0?rik=%2fuDc6mLtfp7i4w&riu=http%3a%2f%2fwww.siwuprint.com%2fupsmb%2f201512%2f2015122321562514666.JPG&ehk=U%2bYrhAth%2fD8G08fLR%2fmC7doRr8zsNlXlWIPMRvAXIb4%3d&risl=&pid=ImgRaw&r=0"
+                        "Data": "https://cbu01.alicdn.com/img/ibank/2014/139/158/1297851931_1572517490.jpg"
                         # 文件地址
                     }
             },

@@ -21,13 +21,13 @@ class License_upload:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "3U9TTfLYG6FbfUgm",  # 对应大订单号
-                "ApplyPolicyRef": "ET202300000009133815",  # 对应大投保单号
+                "AgencyPolicyRef": "TENSERTVAC4O121SXVT14Y4HS8PHTENK",  # 对应大订单号
+                "ApplyPolicyRef": "ET202400027352000181",  # 对应大投保单号
                 "File":
                     {
                         "FileName": "营业执照.jpg",  # 带后缀名称的文件名
                         "FileType": "FILE_URL",  # 文件类型，FILE_URL 文件url；BASE64，base64编码格式
-                        "Data": "https://waizi.org.cn/uploadfile/201402/22/220466577.jpg"  # 文件地址
+                        "Data": "https://cbu01.alicdn.com/img/ibank/2014/139/158/1297851931_1572517490.jpg"  # 文件地址
                     }
             },
             "ChannelCode": self.ChannelCode,

@@ -12,7 +12,7 @@ SELECT * FROM ord_proposal where group_proposal_no ='8H2405DA1A3Y868';
 
 -- 通过保单号查询保单信息
 
-SELECT * FROM ord_proposal where policy_no ='6H2405DA88T3206';
+SELECT * FROM ord_proposal where policy_no ='EP202404251054866663';
 
 -- 通过保单号查询分期表信息
 
@@ -28,9 +28,7 @@ DELETE FROM ord_correct_order WHERE policy_no = '6H2405DA88T3926';
 
 -- 通过投保单号查询保单信息
 
-SELECT * FROM ord_proposal where proposal_no ='I8550986144944136752';
-
-SELECT * FROM ord_proposal where group_channel_proposal_no ='G8551881834607706731';
+SELECT * FROM ord_proposal where proposal_no ='ET202400027079000181';
 
 -- 通过投保单号删除保单信息
 
@@ -49,21 +47,21 @@ SELECT * FROM increase_amount_record where policy_no = '6H2405DA88T0696';
 select t2.* from ord_proposal t1
 left join ord_electronics t2
 on t1.id = t2.proposal_id
-where t1.proposal_no = 'I8518954931685564562';
+where t1.proposal_no = 'I8634358366467153931';
 
--- 通过出单时间和产品码查询改时间端保单信息
+-- 通过出单时间和产品计划码查询改时间端保单信息
 
-SELECT * FROM insure_v1.ord_proposal  WHERE plan_code ='TKG20240325F04' AND create_time>'2024-03-28 00:00:00' and create_time <= '2024-03-29 00:00:00'
+SELECT * FROM insure_v1.ord_proposal  WHERE plan_code ='TKG20240325F04' AND create_time>'2024-04-9 00:00:00' and create_time <= '2024-04-10 00:00:00'
  -- AND status IN (4,5) AND policy_no =''
 ORDER BY id ASC;
 
--- 通过保单号查询手机理赔申请记录
+-- 通过保单号查询手机理赔申请记录 :1-已接收、2-申请成功、3-申请失败、4 - 申请中
 
-SELECT * FROM claim_apply_record WHERE policy_no = 'EP202403640077372178';
+SELECT * FROM claim_apply_record WHERE policy_no = 'EP202403640000019695';
 
--- 通过保单号查询理赔材料上传信息
+-- 通过保单号查询理赔材料上传信息;upload_status上传状态：1 - 不可上传、2 - 可上传、3 - 上传成功 、 4 - 上传失败、 5 - 处理中;async_type1 - 同步、2 - 异步
 
-SELECT * FROM claim_material WHERE policy_no = 'EP202403640077372178';
+SELECT * FROM claim_material WHERE policy_no = 'EP202403640000019695';
 
 -- 退运险理赔申请记录,通过保单号查询
 
@@ -116,3 +114,18 @@ VALUES (1,26 ),(2,26 ),(3,26 ),(4,26 ),(5,26 ),(6,26 ),(7,26 ),(8,26 ),(9,26 ),
 
 SELECT * FROM `insure_channel_v1`.`channel_plan` ;
 
+-- 门店保,标的信息
+
+SELECT * FROM `insure_v1`.`subject_matter_info`;
+
+-- 门店保,营业执照
+
+SELECT * FROM `insure_v1`.`ord_insured_extra`;
+
+-- 门店保,支付凭证
+
+SELECT * FROM `insure_v1`.`pay_certificate`;
+
+-- 门店保,发票申请记录
+
+SELECT * FROM `insure_v1`.`policy_invoice`;
