@@ -28,7 +28,7 @@ DELETE FROM ord_correct_order WHERE policy_no = '6H2405DA88T3926';
 
 -- 通过投保单号查询保单信息
 
-SELECT * FROM ord_proposal where proposal_no ='ET202400027079000181';
+SELECT * FROM ord_proposal where proposal_no ='ET202400028643000181';
 
 -- 通过投保单号删除保单信息
 
@@ -36,7 +36,7 @@ DELETE FROM ord_proposal where proposal_no ='EP202403640077372178';
 
 -- 通过保单号查询,团单,脱保,退运险执行定时任务后数据写入
 
-SELECT * FROM asy_task where identification = '6H2405DA88T3926';
+SELECT * FROM asy_task where identification = 'EP202403202280000123';
 
  -- 通过保单号查询保额批增信息
 
@@ -120,12 +120,14 @@ SELECT * FROM `insure_v1`.`subject_matter_info`;
 
 -- 门店保,营业执照
 
-SELECT * FROM `insure_v1`.`ord_insured_extra`;
+SELECT * FROM `insure_v1`.`ord_insured_extra` ORDER BY id DESC;
 
--- 门店保,支付凭证
+-- 门店保,支付凭证,通过保单号查询
 
-SELECT * FROM `insure_v1`.`pay_certificate`;
+SELECT * FROM `insure_v1`.`pay_certificate` WHERE ray_code = 'ET202400028972000181';
 
 -- 门店保,发票申请记录
+
+SELECT * FROM `insure_v1`.`policy_invoice`;
 
 SELECT * FROM `insure_v1`.`policy_invoice`;
