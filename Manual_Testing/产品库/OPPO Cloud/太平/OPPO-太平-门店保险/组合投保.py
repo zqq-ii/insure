@@ -34,7 +34,7 @@ class Joint_Investment:
                         "Currency": "CNY",  # 币别
                         "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
                         "TotalFaceAmount": "2500000.00",  # 总保额
-                        "PlanCodeList": ["TP2023051101","TP2023051102"]  # 组合投保的计划码列表，可以是一个或者多个 如 [10001,10002]
+                        "PlanCodeList": ["TP2023051101", "TP2023051102"]  # 组合投保的计划码列表，可以是一个或者多个 如 [10001,10002]
                     },
                 "PolicyInfoList":
                     [

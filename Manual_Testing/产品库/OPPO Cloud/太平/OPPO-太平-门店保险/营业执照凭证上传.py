@@ -21,8 +21,8 @@ class License_upload:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "TENSERAONBFQI6S629ZB3TKVPCASFU9R",  # 对应大订单号
-                "ApplyPolicyRef": "ET202400028972000181",  # 对应大投保单号
+                "AgencyPolicyRef": "TENSERFHQ5BWJ7OOP5RLK6EGSLI024WR",  # 对应大订单号
+                "ApplyPolicyRef": "ET202400029616000181",  # 对应大投保单号
                 "File":
                     {
                         "FileName": "营业执照.jpg",  # 带后缀名称的文件名

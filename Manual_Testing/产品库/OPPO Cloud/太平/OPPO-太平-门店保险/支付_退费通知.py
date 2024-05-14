@@ -21,8 +21,8 @@ class Payment_refund:
         request_url = self.host + url
         body = {
             "Data": {
-                "AgencyPolicyRef": "TENSERAONBFQI6S629ZB3TKVPCASFU9R",  # 第三方渠道公司保单号码或者第三方渠道公司订单号码;[太平门店险传大订单号]
-                "PolicyRef": "ET202400028972000181",  # 保单号;[太平门店险传大投保单号,可不传]
+                "AgencyPolicyRef": "TENSERXU0NI685YOQIO1GJQD16R35VSH",  # 第三方渠道公司保单号码或者第三方渠道公司订单号码;[太平门店险传大订单号]
+                # "PolicyRef": "ET202400029540000181",  # 保单号;[太平门店险传大投保单号,可不传]
                 "InstallmentNo": "1",  # 分期号(兼容资金安全险非必填),非分期产品默认为第一期
                 "TotalPremium": "860.00",  # 保费，分期产品为对应期数保费
                 "Currency": "CNY",  # 币别
