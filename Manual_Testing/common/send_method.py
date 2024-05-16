@@ -74,7 +74,7 @@ class SendMethod:
     def PostData_ae(key, url, body, headers):
         try:
             aes = EncryptDate(key)
-            Body = aes.encrypt(JsonFormatting(body))
+            Body = aes.encrypt(json.dumps(body, ensure_ascii=False))
             response = requests.post(url=url, data=Body, headers=headers)
             result = {}
             result["StatusCode"] = response.status_code
