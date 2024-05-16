@@ -23,11 +23,10 @@ class Zh_Underwriting:
         body = {
             "Data":
                 {
-                    "ApplyPolicyRef": "ET202400029616000181",  # 大投保单号
+                    "ApplyPolicyRef": "ET202400030809000181",  # 大投保单号
                     "TotalPremium": "860.00",  # 保费
                     "Currency": "CNY",  # 币别
                     "PaymentMethod": "7",  # 支付方式
-                    "FaceAmount": "2500000.00",  # 总保额，单位元
                     "PaymentDate": co.Time(),  # 支付时间
                     "PaymentFlowNum": co.RandomStr().create()  # 支付流水号,对公转账可为空
                 },
