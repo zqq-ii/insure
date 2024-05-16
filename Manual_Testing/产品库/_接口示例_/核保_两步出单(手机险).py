@@ -95,7 +95,7 @@ class SJX_Underwriting:
             "RequestType": "0006",
             "Version": "1.0.0"
         }
-        return SendMethod.AesEcb_post(key=self.key, url=request_url, body=body, headers=self.headers)
+        return SendMethod.PostData_ae(key=self.key, url=request_url, body=body, headers=self.headers)
 
 
 if __name__ == "__main__":
