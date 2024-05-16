@@ -55,7 +55,7 @@ class Joint_Investment:
                                 {
                                     "PolicyHolderType": "1",  # 投保人类型：1-个人，2-企业或者机构
                                     "PolicyHolderName": "游点叼",  # 投保人名称（个人-姓名；企业/机构-公司/机构名称）
-                                    "PHIdType": "01",  # 证件类型;01居民身份证,02户口簿等;投保类型为2不传
+                                    "PHIdType": "01",  # 证件类型;01居民身份证,09统一社会信用代码;投保类型为2不传
                                     "PHIdNumber": "431123199801075873",  # 证件号
                                     "PHContactName": "游点叼",  # 联系人姓名
                                     "PHTelephone": "13410506136",  # 联系人手机号
@@ -70,6 +70,7 @@ class Joint_Investment:
                                         "InsuredId": "1",  # 被保险人唯一Id（一个被保人默认传“1”，多个被保人按顺序排序 ）
                                         "InsuredName": "欧珀官方旗舰店前海分店",  # 被保人名称（个人-姓名；企业/机构-公司/机构名称）
                                         "Email": "889776565@qq.com",  # 电子邮箱
+                                        "IdType": "09",  # 证件类型;01居民身份证,09统一社会信用代码;投保类型为2不传
                                         "IdNumber": "91441900MA545CQH4R",  # 证件号
                                         "Type": "2",  # 被保人类型：1个人，2-企业或者机构
                                         "InsuredContactName": "游点叼",  # 联系人姓名
@@ -106,7 +107,7 @@ class Joint_Investment:
                                 {
                                     "PolicyHolderType": "1",  # 投保人类型：1-个人，2-企业或者机构
                                     "PolicyHolderName": "游点叼",  # 投保人名称（个人-姓名；企业/机构-公司/机构名称）
-                                    "PHIdType": "01",  # 证件类型;01居民身份证,02户口簿等;投保类型为2不传
+                                    "PHIdType": "01",  # 证件类型;01居民身份证,09统一社会信用代码;投保类型为2不传
                                     "PHIdNumber": "431123199801075873",  # 证件号
                                     "PHContactName": "游点叼",  # 联系人姓名
                                     "PHTelephone": "13410506136",  # 联系人手机号
@@ -121,6 +122,7 @@ class Joint_Investment:
                                         "InsuredId": "1",  # 被保险人唯一Id（一个被保人默认传“1”，多个被保人按顺序排序 ）
                                         "InsuredName": "欧珀官方旗舰店前海分店",  # 被保人名称（个人-姓名；企业/机构-公司/机构名称）
                                         "Email": "889776565@qq.com",  # 电子邮箱
+                                        "IdType": "09",  # 证件类型;01居民身份证,09统一社会信用代码;投保类型为2不传
                                         "IdNumber": "91441900MA545CQH4R",  # 证件号
                                         "Type": "2",  # 被保人类型：1个人，2-企业或者机构
                                         "InsuredContactName": "游点叼",  # 联系人姓名
