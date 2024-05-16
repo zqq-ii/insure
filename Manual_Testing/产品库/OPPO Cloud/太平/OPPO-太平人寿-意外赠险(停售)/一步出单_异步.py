@@ -83,7 +83,7 @@ class One_order:
             "Version": "1.0.0",
         }
         # print(json.dumps(body, ensure_ascii=False))
-        return SendMethod.PostData_ae(key=self.key, url=request_url, body=body, headers=self.headers)
+        return SendMethod.PostData_aes(key=self.key, url=request_url, body=body, headers=self.headers)
 
 
 if __name__ == "__main__":

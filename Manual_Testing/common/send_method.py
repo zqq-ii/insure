@@ -71,7 +71,7 @@ class SendMethod:
             return result
 
     @staticmethod
-    def PostData_ae(key, url, body, headers):
+    def PostData_aes(key, url, body, headers):
         try:
             aes = EncryptDate(key)
             Body = aes.encrypt(json.dumps(body, ensure_ascii=False))
