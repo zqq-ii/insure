@@ -16,13 +16,13 @@ class Status_callback:
     def Status_callback(self):
         url = "/issuingmc/channelopenapi/tp/store/invoice/callback"
         request_url = self.host + url
-        body = """<?xml version="1.0" encoding="UTF-8"?>
+        body = f"""<?xml version="1.0" encoding="UTF-8"?>
                     <document>
                         <request>
                             <head>
                                 <productCode>0201797</productCode>
                                 <businessType>invoice</businessType>
-                                <transTime>2024-05-12 16:34:00</transTime>
+                                <transTime>{co.Execution_Time()}</transTime>
                                 <agencyCode>BBK</agencyCode>
                                 <orderNo>O162220240512163325972</orderNo>
                             </head>
@@ -35,6 +35,8 @@ class Status_callback:
                """
         return SendMethod.post_datax(url=request_url, data=body)
 
+
+"""修改需要回调policyno保单号即可;仅电子发票需要回调"""
 
 if __name__ == "__main__":
     Res = Status_callback().Status_callback()
