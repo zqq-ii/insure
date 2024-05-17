@@ -6,6 +6,7 @@ from Manual_Testing.Environment import Environment
 from Manual_Testing.common import communal as co
 
 config = Config("config.ini")
+"""太平碎屏险理赔,先申请再上传材料"""
 
 
 class Claim_application:
