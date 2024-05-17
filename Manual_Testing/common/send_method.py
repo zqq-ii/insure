@@ -71,11 +71,11 @@ class SendMethod:
             return result
 
     @staticmethod
-    def PostData_aes(key, url, body, headers):
+    def PostData_aes(key, url, data, headers):
         try:
             aes = EncryptDate(key)
-            Body = aes.encrypt(json.dumps(body, ensure_ascii=False))
-            response = requests.post(url=url, data=Body, headers=headers)
+            body = aes.encrypt(json.dumps(data, ensure_ascii=False))
+            response = requests.post(url=url, data=body, headers=headers)
             result = {}
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)

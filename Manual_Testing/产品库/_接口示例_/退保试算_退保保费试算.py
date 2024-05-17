@@ -30,7 +30,7 @@ class Surrender_trial:
             "RequestType": "0016",
             "Version": "1.0.0"
         }
-        return SendMethod.PostData_aes(key=self.key, url=request_url, body=body, headers=self.headers)
+        return SendMethod.PostData_aes(key=self.key, url=request_url, data=body, headers=self.headers)
 
 
 if __name__ == "__main__":
