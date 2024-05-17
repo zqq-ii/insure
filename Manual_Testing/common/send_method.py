@@ -74,8 +74,8 @@ class SendMethod:
     def PostData_aes(key, url, data, headers):
         try:
             aes = EncryptDate(key)
-            body = aes.encrypt(json.dumps(data, ensure_ascii=False))
-            response = requests.post(url=url, data=body, headers=headers)
+            Data = aes.encrypt(json.dumps(data, ensure_ascii=False))
+            response = requests.post(url=url, data=Data, headers=headers)
             result = {}
             result["StatusCode"] = response.status_code
             result["ResponseTime"] = int((response.elapsed.microseconds) / 1000)
