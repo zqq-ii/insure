@@ -8,12 +8,12 @@ from Manual_Testing.common import communal as co
 config = Config("config.ini")
 
 
-class Refund_sales:
+class Callback:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "callback_host")
 
-    def Refund_sales(self):
+    def Callback(self):
         url = "/issuingmc/channelopenapi/query/statusNotice"
         request_url = self.host + url
         body = {
@@ -90,5 +90,5 @@ class Refund_sales:
 
 
 if __name__ == "__main__":
-    Res = Refund_sales().Refund_sales()
+    Res = Callback().Callback()
     print(f'[{co.Execution_Time()}]\n{Res}')

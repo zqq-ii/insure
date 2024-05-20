@@ -8,12 +8,12 @@ from Manual_Testing.common import communal as co
 config = Config("config.ini")
 
 
-class Contract_callback:
+class Callback:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "callback_host")
 
-    def Contract_callback(self):
+    def Callback(self):
         url = "/issuingmc/channelopenapi/directPay/contract/callback"
         request_url = self.host + url
         body = (
@@ -26,5 +26,5 @@ class Contract_callback:
 
 
 if __name__ == "__main__":
-    Res = Contract_callback().Contract_callback()
+    Res = Callback().Callback()
     print(f'[{co.Execution_Time()}]\n{Res}')

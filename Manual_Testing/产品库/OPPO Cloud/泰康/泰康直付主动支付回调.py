@@ -8,12 +8,12 @@ from Manual_Testing.common import communal as co
 config = Config("config.ini")
 
 
-class Payment_callback:
+class Callback:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "callback_host")
 
-    def Payment_callback(self):
+    def Callback(self):
         url = "/issuingmc/channelopenapi/directPay/activePay/callback"
         request_url = self.host + url
         body = ("e4Qez8VnpsQG83sxchd7aSHFgMO7a9wolbpCE7slS52Q9dRwD9KMH1TjOsYUO01MQFUhPmN071jSk6Jmip9EV7TeklKgHDMvAZer"
@@ -26,5 +26,5 @@ class Payment_callback:
 
 
 if __name__ == "__main__":
-    Res = Payment_callback().Payment_callback()
+    Res = Callback().Callback()
     print(f'[{co.Execution_Time()}]\n{Res}')
