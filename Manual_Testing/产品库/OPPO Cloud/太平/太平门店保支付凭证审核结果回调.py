@@ -17,7 +17,7 @@ class Callback:
         url = "/core/backend/certificate/check"
         request_url = self.host + url
         body = {
-            "id": 2,  # 支付凭证审核id
+            "id": 2,  # 支付凭证审核id;(注:该条数据在支付凭证表pay_certificate中的id)
             "auditStatus": "PASSED"  # 审核状态:PASSED-通过,REJECT-驳回
         }
         return SendMethod.post_json(url=request_url, json=body)
