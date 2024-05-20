@@ -48,7 +48,7 @@ class RandomStr:
             res += random.choice(charset)
         str_list = list(res)
         random.shuffle(str_list)
-        return 'TENSER' + ''.join(str_list)
+        return 'ZIDING' + ''.join(str_list)
 
 
 class Logger(object):
