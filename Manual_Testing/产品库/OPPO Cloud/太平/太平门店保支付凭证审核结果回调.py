@@ -17,12 +17,13 @@ class Callback:
         url = "/core/backend/certificate/check"
         request_url = self.host + url
         body = {
-            "id": 40,  # 支付凭证审核id
-            "auditStatus": "REJECT"  # 审核状态:PASSED-通过,REJECT-驳回
+            "id": 2,  # 支付凭证审核id
+            "auditStatus": "PASSED"  # 审核状态:PASSED-通过,REJECT-驳回
         }
         return SendMethod.post_json(url=request_url, json=body)
 
 
+"""请求成功后,查看日志是否有回调推送给OPPO"""
 if __name__ == "__main__":
     Res = Callback().Callback()
     print(f'[{co.Execution_Time()}]\n{Res}')

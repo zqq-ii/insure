@@ -33,7 +33,7 @@ class Callback:
 招商信诺海陆空意外伤害保险产品; (product: HLKYW, inid: 11, 不传输保单号), 保障期限: 90天,  推送渠道"AtcualPlanCode":"KS20240423F0403"
 阳光融客-出行无忧意外保障2023款; (product: WDDE10, inid: 1, 不传输保单号), 保障期限: 1个月（自然月）,  推送渠道"AtcualPlanCode":"KS20240423F0404"
 """
-
+"""请求成功后,查看日志是否有回调推送给OPPO"""
 if __name__ == "__main__":
     Res = Callback().Callback()
     print(f'[{co.Execution_Time()}]\n{Res}')

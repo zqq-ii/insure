@@ -37,7 +37,7 @@ class Callback:
 
 
 """修改需要回调policyno保单号即可;仅电子发票需要回调"""
-
+"""请求成功后,查看日志是否有回调推送给OPPO"""
 if __name__ == "__main__":
     Res = Callback().Callback()
     print(f'[{co.Execution_Time()}]\n{Res}')
