@@ -82,18 +82,18 @@ class Rsa:
 
 if __name__ == '__main__':
     """"""
-    print(AES_DES().AES_DES(
-        task=0,
-        text='Je0ffRcDnT6GSPNbAOqcipXdec5M/MLuuE/jydKaWZ18loGvOstyW3Sj+vYiKmGH2iUXdNDbv53zO6sw/BODa/6pPlW0SPVeLJn4OLoXVEOefWXuBJLOo0bF25ywVTyjA3feA0dhfEJjNrotupLnZRcDw4K9EM7wd/VXQllhXCuuaiHVbkxxAKwymEB8R7oRH9s3UBMHwZrPIG94j6iJPKsBwE0FQFOhgY/OObVOnhOzdi/Sp6S6VYevIHBZq45gsfoLLdPqAgEPA++Fl0POlBADKQ9VaellXzEBgsNzrTqkerdo9MZgtRK0p9NemiiEBq55/OcWNEn4quc3Kdfo/YyF7qlb//h79+ClP4j/djYdOZhbdZRMFSl6ew+mol4pL15MKYdtvDacDUc+pfw1BtrAJ5ER0rEnWiutiF8FOeU='))
+    # print(AES_DES().AES_DES(
+    #     task=0,
+    #     text='Je0ffRcDnT6GSPNbAOqcipXdec5M/MLuuE/jydKaWZ18loGvOstyW3Sj+vYiKmGH2iUXdNDbv53zO6sw/BODa/6pPlW0SPVeLJn4OLoXVEOefWXuBJLOo0bF25ywVTyjA3feA0dhfEJjNrotupLnZRcDw4K9EM7wd/VXQllhXCuuaiHVbkxxAKwymEB8R7oRH9s3UBMHwZrPIG94j6iJPKsBwE0FQFOhgY/OObVOnhOzdi/Sp6S6VYevIHBZq45gsfoLLdPqAgEPA++Fl0POlBADKQ9VaellXzEBgsNzrTqkerdo9MZgtRK0p9NemiiEBq55/OcWNEn4quc3Kdfo/YyF7qlb//h79+ClP4j/djYdOZhbdZRMFSl6ew+mol4pL15MKYdtvDacDUc+pfw1BtrAJ5ER0rEnWiutiF8FOeU='))
     ####################################################
-    # """Rsa"""
-    # # 生成公钥和私钥
-    # (pubkey, privkey) = rsa.newkeys(2048)
-    # # 创建加密对象
-    # rsa_ = Rsa(pubkey, privkey)
-    # # 加密和解密中文消息
-    # message = "你好，世界！"
-    # encrypted_message = rsa_.encrypt(message)
-    # print("加密后的消息：", encrypted_message)
-    # decrypted_message = rsa_.decrypt(encrypted_message)
-    # print("解密后的消息：", decrypted_message)
+    """Rsa"""
+    # 生成公钥和私钥
+    (pubkey, privkey) = rsa.newkeys(2048)
+    # 创建加密对象
+    rsa_ = Rsa(pubkey, privkey)
+    # 加密和解密中文消息
+    message = "你好，世界！"
+    encrypted_message = rsa_.encrypt(message)
+    print("加密后的消息：", encrypted_message)
+    decrypted_message = rsa_.decrypt(encrypted_message)
+    print("解密后的消息：", decrypted_message)
