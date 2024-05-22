@@ -21,9 +21,9 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "EP202403640076971140",  # 保单号
+                "PolicyRef": "EP202403640000024330",  # 保单号
                 "CancelDate": co.Time(),  # 退保申请时间
-                "CancelPremium": "2.06",  # 退保金额（不一定等于实际退费金额）
+                "CancelPremium": "448.0",  # 退保金额（不一定等于实际退费金额）
                 "Currency": None,  # 币种
                 "Type": None,  # 退保类型： 正常退保 - NORMAL ，协商退保 - NEGOTIATE
                 "ReasonRemark": None,  # 退保原因

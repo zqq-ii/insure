@@ -28,9 +28,9 @@ class SJX_Underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TP2022031801",  # 计划代码   (普通款:TP2022031801)
-                    "IssueDate": "20240420235959",  # 出单时间     (此产品测试环境可倒签)
-                    "EffectiveDate": "20240421000000",  # 生效时间
-                    "ExpireDate": "20250420235959",  # 失效时间
+                    "IssueDate": "20240520235959",  # 出单时间     (此产品测试环境可倒签)
+                    "EffectiveDate": "20240521000000",  # 生效时间
+                    "ExpireDate": "20250520235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴

@@ -28,9 +28,9 @@ class SJX_Underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TP2022031802",  # 计划代码   (普通款:TP2022031802)
-                    "IssueDate": "20250217235959",  # 出单时间      (此产品测试环境可倒签)
-                    "EffectiveDate": "20250218000000",  # 生效时间
-                    "ExpireDate": "20250317235959",  # 失效时间
+                    "IssueDate": "20240617235959",  # 出单时间      (此产品测试环境可倒签)
+                    "EffectiveDate": "20240618000000",  # 生效时间
+                    "ExpireDate": "20240717235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
@@ -38,7 +38,7 @@ class SJX_Underwriting:
                     "FaceAmount": "3000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
-                    "InstallmentNo": "13"  # 期数，分期趸交产品必传
+                    "InstallmentNo": "2"  # 期数，分期趸交产品必传
                 },
                 "PolicyHolder": {  # 投保人信息
                     "PolicyHolderType": "2",  # 投保人类型1-个人2-企业或者机构
@@ -76,8 +76,8 @@ class SJX_Underwriting:
                         "ProductBrand": "01",  # 产品品牌：01(OPPO) 04(OnePlus) 05(realme)
                         "ProductCategory": "01",  # 产品分类：01(手机)
                         "ProductModel": "Reno4 5G",  # 产品型号
-                        "ProductSerialNo": "TenSerru34zvt0fk",  # 产品序列号
-                        "ActiveDate": "20240318000000",  # 激活日期 碎屏险必传
+                        "ProductSerialNo": "co.RandomStr().create()003",  # 产品序列号
+                        "ActiveDate": "20240518000000",  # 激活日期 碎屏险必传
                         "ProductPrice": "265.00",  # 产品价格
                         "PurchaseChannel": "6456415",  # 购买渠道(预留字段)
                         "Source": None  # 流量来源：1 - 固定入口、2 - 主动推送、3 - 其它，默认固定入口（比如钱包固定位、主动推送）
