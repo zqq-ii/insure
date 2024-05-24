@@ -47,7 +47,7 @@ class AES_DES:
     def AES_DES(self, task=None, text=None):
         try:
             if task == 0 or task == "0":
-                eg = AesEncryption(self.key)
+                eg = AesDensity(self.key)
                 res = eg.decrypt(text)
                 return "解密res:" + res
             elif task == 1 or task == "1":

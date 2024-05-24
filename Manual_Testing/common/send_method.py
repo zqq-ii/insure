@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests, json
-from Manual_Testing.common.AesDensity import AesDensity
+from Manual_Testing.common.encryption_decryption import AesDensity
 from Manual_Testing.common.communal import JsonFormatting
 
 
