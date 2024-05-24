@@ -7,7 +7,7 @@ from Manual_Testing.Environment import Environment
 config = Config("config.ini")
 
 
-class EncryptDate:
+class AesDensity:
     """
     加密初始化:封装AES+base64,ECB模式加解密
     """
@@ -47,7 +47,7 @@ class AES_DES:
     def AES_DES(self, task=None, text=None):
         try:
             if task == 0 or task == "0":
-                eg = EncryptDate(self.key)
+                eg = AesEncryption(self.key)
                 res = eg.decrypt(text)
                 return "解密res:" + res
             elif task == 1 or task == "1":

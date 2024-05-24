@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests, json
-from Manual_Testing.common.encryption_decryption import EncryptDate
+from Manual_Testing.common.AesDensity import AesDensity
 from Manual_Testing.common.communal import JsonFormatting
 
 
@@ -73,7 +73,7 @@ class SendMethod:
     @staticmethod
     def PostData_aes(key, url, data=None, headers=None):
         try:
-            aes = EncryptDate(key)
+            aes = AesDensity(key)
             Data = aes.encrypt(json.dumps(data, ensure_ascii=False))
             response = requests.post(url=url, data=Data, headers=headers)
             result = {}
