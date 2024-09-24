@@ -50,6 +50,7 @@ class Callback:
                 "endorAppNo": "2H2405DA1AC6KN8"
             }
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.post_json(url=request_url, json=body)
 
 

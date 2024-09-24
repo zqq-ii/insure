@@ -37,6 +37,7 @@ class Paid_up:
             "ChannelCode": self.ChannelCode,
             "RequestType": "0035"
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.PostData_aes(key=self.key, url=request_url, data=body, headers=self.headers)
 
 

@@ -26,6 +26,7 @@ class Callback:
             "version": "1.0.1",
             "timestamp": "1709550359331"
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.post_json(url=request_url, json=body)
 
 

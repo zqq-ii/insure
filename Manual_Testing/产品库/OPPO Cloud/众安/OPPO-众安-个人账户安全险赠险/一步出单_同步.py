@@ -81,6 +81,7 @@ class One_order:
             "Version": "1.0.0",
         }
         # print(json.dumps(body, ensure_ascii=False))
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.PostData_aes(key=self.key, url=request_url, data=body, headers=self.headers)
 
 

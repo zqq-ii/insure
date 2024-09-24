@@ -85,6 +85,7 @@ class Callback:
             "dataSource": "openApi",
             "effectiveDate": "2023-12-22 00:00:00"
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.post_json(url=request_url, json=body)
 
 

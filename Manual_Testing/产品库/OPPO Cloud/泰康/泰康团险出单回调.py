@@ -110,6 +110,7 @@ class Callback:
                 "channelCode": "086000001042"
             }
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.post_json(url=request_url, json=body)
 
 

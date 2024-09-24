@@ -33,6 +33,7 @@ class Callback:
                         </request>
                     </document>
                """
+        print(f'[{co.Execution_Time()}]-Request:\n{body}')
         return SendMethod.post_datax(url=request_url, data=body)
 
 

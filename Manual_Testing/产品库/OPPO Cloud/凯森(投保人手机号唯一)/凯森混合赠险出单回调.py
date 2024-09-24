@@ -24,6 +24,7 @@ class Callback:
             "product": "1304104136",  # 产品编码
             "inid": "15"  # 保司编码
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.post_jsonx(url=request_url, json=body)
 
 

@@ -35,6 +35,7 @@ class Machine_inspection_application:
             "RequestType": "0037",
             "Version": "1.0.0"
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.PostData_aes(key=self.key, url=request_url, data=body, headers=self.headers)
 
 

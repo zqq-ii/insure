@@ -86,6 +86,7 @@ class Callback:
             "service_id": "01",
             "sign": "6c1fa630777cd441e33a683403a980d9"
         }
+        print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
         return SendMethod.post_json(url=request_url, json=body)
 
 
