@@ -93,4 +93,4 @@ class Renew_insurance:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Renew_insurance().Renew_insurance()
-    print(f'时间:{co.Time()};安盛百万医疗升级:续保(年)>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

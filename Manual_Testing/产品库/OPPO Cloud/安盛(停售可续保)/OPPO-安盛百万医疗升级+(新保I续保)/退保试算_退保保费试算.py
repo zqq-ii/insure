@@ -37,4 +37,4 @@ class Surrender_trial:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Surrender_trial().Surrender_trial()
-    print(f'时间:{co.Time()};安盛百万医疗升级:退保试算>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

@@ -40,4 +40,4 @@ class Insure:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Insure().Insure()
-    print(f'时间:{co.Time()};安盛百万医疗升级:承保>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

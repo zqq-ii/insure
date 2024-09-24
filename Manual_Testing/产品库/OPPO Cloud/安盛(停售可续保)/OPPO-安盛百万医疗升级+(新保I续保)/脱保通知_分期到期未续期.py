@@ -37,4 +37,4 @@ class Release_Notice:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Release_Notice().Release_Notice()
-    print(f'时间:{co.Time()};安盛百万医疗升级:脱保>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

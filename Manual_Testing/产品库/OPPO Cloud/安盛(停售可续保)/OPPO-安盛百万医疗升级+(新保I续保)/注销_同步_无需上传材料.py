@@ -40,4 +40,4 @@ class Synchronize_logout:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Synchronize_logout().Synchronize_logout()
-    print(f'时间:{co.Time()};安盛百万医疗升级:注销>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

@@ -43,4 +43,4 @@ class Renewal:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Renewal().Renewal()
-    print(f'时间:{co.Time()};安盛百万医疗升级:续期>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

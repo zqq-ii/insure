@@ -100,4 +100,4 @@ class JKX_underwriting:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = JKX_underwriting().JKX_underwriting()
-    print(f'时间:{co.Time()};安盛百万医疗升级:核保(年)>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

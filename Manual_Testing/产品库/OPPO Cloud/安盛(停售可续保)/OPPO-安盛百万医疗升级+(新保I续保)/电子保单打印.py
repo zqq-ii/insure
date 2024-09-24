@@ -36,4 +36,4 @@ class Policy_printing:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Policy_printing().Policy_printing()
-    print(f'时间:{co.Time()};安盛百万医疗升级:打印保单>{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')
