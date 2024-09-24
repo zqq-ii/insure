@@ -42,4 +42,4 @@ class Material_upload:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Material_upload().Material_upload()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

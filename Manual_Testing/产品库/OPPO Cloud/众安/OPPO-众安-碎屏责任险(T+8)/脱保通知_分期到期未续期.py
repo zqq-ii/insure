@@ -36,4 +36,4 @@ class Release_Notice:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Release_Notice().Release_Notice()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

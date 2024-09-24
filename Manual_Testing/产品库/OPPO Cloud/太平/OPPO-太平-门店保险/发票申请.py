@@ -57,4 +57,4 @@ class Invoice_application:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Invoice_application().Invoice_application()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

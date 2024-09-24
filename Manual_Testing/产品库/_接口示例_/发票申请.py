@@ -58,4 +58,4 @@ if __name__ == "__main__":
     sys.stdout = co.Logger()
     RandomZ = co.RandomStr().create()
     Res = Invoice_application().Invoice_application()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

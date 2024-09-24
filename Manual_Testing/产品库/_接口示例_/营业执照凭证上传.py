@@ -41,4 +41,4 @@ class License_upload:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = License_upload().License_upload()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

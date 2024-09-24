@@ -34,4 +34,4 @@ status和reason: 1-审核通过(单证齐全),2-单证退回,3-核赔通过,4-�
 """请求成功后,查看日志是否有回调推送给OPPO"""
 if __name__ == "__main__":
     Res = Callback().Callback()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

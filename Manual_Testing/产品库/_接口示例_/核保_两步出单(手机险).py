@@ -101,4 +101,4 @@ class SJX_Underwriting:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = SJX_Underwriting().SJX_Underwriting()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

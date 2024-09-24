@@ -39,4 +39,4 @@ class Insure:
 if __name__ == "__main__":
     sys.stdout =co.Logger()
     Res = Insure().Insure()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

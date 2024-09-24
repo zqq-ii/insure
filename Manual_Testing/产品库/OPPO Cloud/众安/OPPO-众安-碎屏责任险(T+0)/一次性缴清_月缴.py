@@ -43,4 +43,4 @@ class Paid_up:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Paid_up().Paid_up()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

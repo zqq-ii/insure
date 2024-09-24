@@ -55,4 +55,4 @@ class Synchronous_surrender:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Synchronous_surrender().Synchronous_surrender()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')

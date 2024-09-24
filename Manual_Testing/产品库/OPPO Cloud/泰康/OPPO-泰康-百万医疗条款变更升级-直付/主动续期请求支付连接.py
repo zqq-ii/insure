@@ -85,4 +85,4 @@ class Renewal_payment_link:
 if __name__ == "__main__":
     sys.stdout = co.Logger()
     Res = Renewal_payment_link().Renewal_payment_link()
-    print(f'[{co.Execution_Time()}]\n{Res}')
+    print(f'[{co.Execution_Time()}]-Response:\n{Res}')
