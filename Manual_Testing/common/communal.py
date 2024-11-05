@@ -120,12 +120,18 @@ def newIdNum(year=random.randint(1974, 2001), month=random.randint(1, 12), day=r
             id = id + str(sign).zfill(3)  # 顺序号简单处理
         except:
             id = id + '465'
-        # 计算校验码,拼接身份证并返回
-        sum_1 = 0
-        for a in range(0, 17):
-            sum_1 += int(id[a]) * weight[a]
-        index_id = sum_1 % 11
-        result_id = id + str(checkcode[str(index_id)])  # 最终号码
+        # 计算校验码,拼接身份证并返回再校验身份证号码
+        sum = 0
+        for i in range(17):
+            sum += int(id[i]) * weight[i]
+        result = sum % 11
+        result_id = id + str(checkcode[str(result)])  # 最终号码
+        if result in checkcode.keys():
+            if str(checkcode.get(result)) == str(result_id[-1]):
+                return result_id  # 最终号码
+            else:
+                pass
+        # 判断性别
         if sex == "女":
             gender = int(result_id[16])
             if gender % 2 == 0:
@@ -140,15 +146,6 @@ def newIdNum(year=random.randint(1974, 2001), month=random.randint(1, 12), day=r
                 pass
         else:
             return result_id
-        sum = 0  # 校验身份证号码
-        for i in range(17):
-            sum += int(result_id[i]) * weight[i]
-        result = sum % 11
-        if result in checkcode.keys():
-            if str(checkcode.get(result)) == str(result_id[-1]):
-                return result_id
-            else:
-                pass
 
 
 def Birthday(id_card=newIdNum()):
