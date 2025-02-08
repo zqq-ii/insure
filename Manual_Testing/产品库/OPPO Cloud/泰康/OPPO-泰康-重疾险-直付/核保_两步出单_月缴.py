@@ -29,13 +29,13 @@ class JKX_underwriting:
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
                     "PlanCode": "TK202308183002",  # 计划代码;(TK202308181002;10w款,TK202308182002;20w款,TK202308183002;30w款)
-                    "IssueDate": co.Time(),  # 出单时间
-                    "EffectiveDate": co.Tomorrow(),  # 生效时间         注:该产品支持次日凌晨或T+30生效
-                    "ExpireDate": co.SeveralYears(),  # 失效时间
+                    "IssueDate": "20241223102900",  # 出单时间
+                    "EffectiveDate": "20241224000000",  # 生效时间         注:该产品支持次日凌晨或T+30生效
+                    "ExpireDate": "20251223235959",  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "434.40",  # 总保费
+                    "TotalPremium": "676.80",  # 总保费
                     "FaceAmount": "300000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
@@ -43,11 +43,11 @@ class JKX_underwriting:
                 },
                 "PolicyHolder": {  # 投保人信息
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
-                    "PolicyHolderName": "佐佐木",  # 用户姓名/企业名
+                    "PolicyHolderName": "孙冰沙",  # 用户姓名/企业名
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
-                    "PHIdNumber": "420204199801078090",  # 证件号/企业编号
+                    "PHIdNumber": "140402199801078120",  # 证件号/企业编号
                     "PHBirthDate": "19980107000000",  # 出生日期 投保类型为2不传
                     "PHTelephone": "13479245685",  # 手机号 投保类型为2非必传
                     "PHEmail": None,  # 邮箱
@@ -56,12 +56,12 @@ class JKX_underwriting:
                 "InsuredList": [  # 被保人信息列表
                     {
                         "InsuredId": "7",  # 被保险人唯一Id，用来确认该保单下被保险人的唯一性
-                        "InsuredName": "佐佐木",  # 用户姓名/企业名
+                        "InsuredName": "孙冰沙",  # 用户姓名/企业名
                         "Gender": None,  # 性别（0女，1男，2其它）
                         "InsuredType": "D1",  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",  # 证件类型(参考附录 证件类型（个人）)投保类型为2不传
-                        "IdNumber": "420204199801078090",  # 证件号/企业编号
+                        "IdNumber": "140402199801078120",  # 证件号/企业编号
                         "BirthDate": "19980107000000",  # 出生日期 投保类型为2非必传
                         "Mobile": None,  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
@@ -78,8 +78,8 @@ class JKX_underwriting:
                     {
                         "InstallmentNum": "12",  # 分期数，如月缴12期
                         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
-                        "InstallmentPremium": "36.20",  # 对应分期号的保费，当前产品固定为首期保费
-                        "EachPremium": "36.20"  # 分期保费
+                        "InstallmentPremium": "56.40",  # 对应分期号的保费，当前产品固定为首期保费
+                        "EachPremium": "56.40"  # 分期保费
                     }
                 ]
             },

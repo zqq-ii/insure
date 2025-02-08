@@ -21,16 +21,16 @@ class Renewal_payment_link:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H231218427185080166377",  # 保单号
+                "PolicyRef": "H241225010132260180519",  # 保单号
                 "PayMethod": "WECHAT",  # 支付方式：微信支付 - WECHAT，支付宝支付 - ALI
-                "Amount": "36.20",  # 支付金额，分期保费之和
+                "Amount": "56.40",  # 支付金额，分期保费之和
                 "PayPlatformType": "WAP",  # 支付平台类型：PC - PC端支付（返回一个二维码页面，只能在pc端打开，用户扫码支付） WAP—WAP端支付(浏览器打开，拉起微信或支付宝支付)
                 "SuccessUrl": "https://www.baidu.com/",  # 签约成功跳转链接
                 "FailUrl": "https://www.taikang.com/",  # 支付失败跳转链接（泰康重疾险直付产品必传）
                 "PremiumPlanList": [
                     {
                         "InstallmentNo": "2",  # 分期号
-                        "InstallmentPremium": "36.20"  # 分期保费
+                        "InstallmentPremium": "56.40"  # 分期保费
                     }
                 ]
             },

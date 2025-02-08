@@ -31,14 +31,14 @@ class JKX_underwriting:
             "Data": {
                 "Policy": {  # 保单信息
                     "AgencyPolicyRef": co.RandomStr().create(),  # 第三方订单号
-                    "PlanCode": "AS20220408202",  # 计划代码;
+                    "PlanCode": "AS202302160202",  # 计划代码;
                     "IssueDate": co.Time(),  # 出单时间      (注:不可倒签)
                     "EffectiveDate": co.Tomorrow(),  # 生效时间
                     "ExpireDate": co.SeveralYears(),  # 失效时间
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "2",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "512.28",  # 总保费
+                    "TotalPremium": "3643.56",  # 总保费
                     "FaceAmount": "9000000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和
                     "InstallmentNumber": "12",  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
@@ -59,19 +59,19 @@ class JKX_underwriting:
                 "InsuredList": [  # 被保人信息列表
                     {
                         "InsuredId": "7",  # 被保险人唯一Id，用来确认该保单下被保险人的唯一性
-                        "InsuredName": "耀阳",  # 用户姓名/企业名
+                        "InsuredName": "耀二",  # 用户姓名/企业名
                         "Gender": None,  # 性别（0女，1男，2其它）
                         "InsuredType": None,  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",  # 证件类型(参考附录 证件类型（个人）)投保类型为2不传
-                        "IdNumber": "630103199801073035",  # 证件号/企业编号
-                        "BirthDate": "19980107000000",  # 出生日期 投保类型为2非必传
+                        "IdNumber": "220421196406239225",  # 证件号/企业编号
+                        "BirthDate": "19640623000000",  # 出生日期 投保类型为2非必传
                         "Mobile": None,  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
                         "ResideAddress": None,  # 详细地址
                         "PolicyholderInsuredRelation": "01",
                         # 被保人与投保人关系(01本人,02配偶,03丈夫,04妻子,05儿子,06女儿,07儿女,08父母,09父亲,10母亲) 投保类型为2时不传
-                        "SocialSecurityFlag": "0",  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
+                        "SocialSecurityFlag": "1",  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
                         "UnderwritingType": "0",  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是 投保类型为2时不传
                         "UnderwritingQuestionList": None,  # 智能核保问卷(智能核保问卷部分是时必填 ) 投保类型为2时不传
                         "OccupationCode": None  # 职业编码，部分产品必传，每个产品职业编码列表独立
@@ -82,8 +82,8 @@ class JKX_underwriting:
                     {
                         "InstallmentNum": "12",  # 分期数，如月缴12期
                         "InstallmentNo": "1",  # 分期号，按照约定传值；只有首期保费核保的产品，分期号固定值为1
-                        "InstallmentPremium": "42.69",  # 对应分期号的保费，当前产品固定为首期保费
-                        "EachPremium": "42.69"  # 分期保费
+                        "InstallmentPremium": "303.63",  # 对应分期号的保费，当前产品固定为首期保费
+                        "EachPremium": "303.63"  # 分期保费
                     }
                 ]
             },

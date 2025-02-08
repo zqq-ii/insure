@@ -38,7 +38,7 @@ class JKX_underwriting:
                     "GroupSize": "1",  # 被保人个数
                     "Currency": "CNY",  # 币别类型
                     "PaymentType": "1",  # 缴费方式：1-年缴2-月缴3-趸缴4-免缴
-                    "TotalPremium": "501.00",  # 总保费
+                    "TotalPremium": "402.00",  # 总保费
                     "FaceAmount": "200000.00",  # 保额注：1、保额可批增为初始保额2、医疗险多种条款为保额之和  (保额不校验)
                     "InstallmentNumber": None,  # 分期期数 (分期产品必传)
                     "ResponsibilityList": None,  # 组合责任列表(部分产品必传) 示例： [“010231”,”010232”]
@@ -46,7 +46,7 @@ class JKX_underwriting:
                 },
                 "PolicyHolder": {  # 投保人信息
                     "PolicyHolderType": "1",  # 投保人类型1-个人2-企业或者机构
-                    "PolicyHolderName": "童琛炜  ",  # 用户姓名/企业名
+                    "PolicyHolderName": "童琛炜",  # 用户姓名/企业名
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "01",
                     # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
@@ -59,19 +59,19 @@ class JKX_underwriting:
                 "InsuredList": [  # 被保人信息列表
                     {
                         "InsuredId": "7",  # 被保险人唯一Id，用来确认该保单下被保险人的唯一性
-                        "InsuredName": "童琛炜  ",  # 用户姓名/企业名
+                        "InsuredName": "严神宝",  # 用户姓名/企业名
                         "Gender": None,  # 性别（0女，1男，2其它）
                         "InsuredType": None,  # 被保险人类型(参考附录 证件类型（个人）) 特殊说明下必传
                         "Type": "1",  # 被保人类型1-个人2-企业或者机构（默认个人）
                         "IdType": "01",  # 证件类型(参考附录 证件类型（个人）)投保类型为2不传
-                        "IdNumber": "620801199801071842",  # 证件号/企业编号
-                        "BirthDate": "19980107000000",  # 出生日期 投保类型为2非必传
+                        "IdNumber": "150501194608147241",  # 证件号/企业编号
+                        "BirthDate": "19460814000000",  # 出生日期 投保类型为2非必传
                         "Mobile": "13410506135",  # 手机号投保类型为2非必传
                         "Email": None,  # 邮箱
                         "ResideAddress": None,  # 详细地址
                         "PolicyholderInsuredRelation": "01",
                         # 被保人与投保人关系(01本人,02配偶,03丈夫,04妻子,05儿子,06女儿,07儿女,08父母,09父亲,10母亲) 投保类型为2时不传
-                        "SocialSecurityFlag": "0",  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
+                        "SocialSecurityFlag": "1",  # 有无社保0无1有 健康险必传，意外险非必传 投保类型为2时不传
                         "UnderwritingType": "0",  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是 投保类型为2时不传
                         "UnderwritingQuestionList": None,  # 智能核保问卷(智能核保问卷部分是时必填 ) 投保类型为2时不传
                         "OccupationCode": None  # 职业编码，部分产品必传，每个产品职业编码列表独立

@@ -21,8 +21,8 @@ class Surrender_trial:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H231018324171340149982",  # 保单号
-                "CancelDate": "20231227005903",  # 退保申请日期
+                "PolicyRef": "H241224010121440133190",  # 保单号
+                "CancelDate": co.Time(),  # 退保申请日期
                 "CancelFlag": "0"  # 退保说明(0-主动，1-被动)
             },
             "ChannelCode": self.ChannelCode,

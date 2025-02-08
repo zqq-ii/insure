@@ -8,7 +8,7 @@ from Manual_Testing.common import communal as co
 config = Config("config.ini")
 
 
-class Insure:
+class Release_Notice:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "host")
@@ -16,21 +16,18 @@ class Insure:
         self.ChannelCode = config.get_value(self.environment, "ChannelCode")
         self.key = config.get_value(self.environment, "key")
 
-    def Insure(self):
-        url = "/issuingmc/channelapi/insure/accept"
+    def Release_Notice(self):
+        url = "/issuingmc/channelapi/insure/endorNotice"
         request_url = self.host + url
         body = {
             "Data": {
-                "ApplyPolicyRef": "00420320241217377157479982537",  # 投保单号
-                "PaymentFlowNum": co.RandomStr().create(),  # 支付流水唯一
-                "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
-                "Currency": "CNY",  # 币种
-                "TotalPremium": "762.00",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
-                "PaymentDate": co.Time()  # 支付时间
+                "PolicyRef": "21010000H27230001560",  # 保单号
+                "EndorDate": "20230602235959",  # 脱保日期
+                "EndorReason": None  # 脱保原因 (阳光百万医疗(计划码YG2021010701，YG2021010702)非必填,其余产品必填)
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": co.RandomStr().create(),
-            "RequestType": "0007",
+            "RequestType": "0030",
             "Version": "1.0.0"
         }
         print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
@@ -39,5 +36,5 @@ class Insure:
 
 if __name__ == "__main__":
     sys.stdout = co.Logger()
-    Res = Insure().Insure()
+    Res = Release_Notice().Release_Notice()
     print(f'[{co.Execution_Time()}]-Response:\n{Res}')

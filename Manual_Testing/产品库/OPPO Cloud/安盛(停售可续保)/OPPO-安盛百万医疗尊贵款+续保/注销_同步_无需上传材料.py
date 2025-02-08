@@ -8,7 +8,7 @@ from Manual_Testing.common import communal as co
 config = Config("config.ini")
 
 
-class Insure:
+class Synchronize_logout:
     def __init__(self):
         self.environment = Environment
         self.host = config.get_value(self.environment, "host")
@@ -16,21 +16,21 @@ class Insure:
         self.ChannelCode = config.get_value(self.environment, "ChannelCode")
         self.key = config.get_value(self.environment, "key")
 
-    def Insure(self):
-        url = "/issuingmc/channelapi/insure/accept"
+    def Synchronize_logout(self):
+        url = "/issuingmc/channelapi/policy/cancel"
         request_url = self.host + url
         body = {
             "Data": {
-                "ApplyPolicyRef": "00420320241217377157479982537",  # 投保单号
-                "PaymentFlowNum": co.RandomStr().create(),  # 支付流水唯一
-                "PaymentMethod": "2",  # 支付方式(1 支付宝,2 微信,3 通联支付,4 快钱支付,5 银行卡,6 优惠券,7 其它：线下结算)
-                "Currency": "CNY",  # 币种
-                "TotalPremium": "762.00",  # 保费（买保险付的钱,分期的就填写一期的钱）不是保额
-                "PaymentDate": co.Time()  # 支付时间
+                "PolicyRef": "21040000H27230013011",  # 保单号
+                "CancelDate": co.Time(),  # 注销申请时间
+                "RefundPremium": "0",  # 注销金额（不一定等于实际退费金额）
+                "Currency": None,  # 币种
+                "Type": None,  # 注销类型： 正常注销 - NORMAL ，协商注销 - NEGOTIATE
+                "ReasonRemark": "测试,注销",  # 注销原因
             },
             "ChannelCode": self.ChannelCode,
             "RequestID": co.RandomStr().create(),
-            "RequestType": "0007",
+            "RequestType": "0015",
             "Version": "1.0.0"
         }
         print(f'[{co.Execution_Time()}]-Request:\n{co.JsonFormatting(body)}')
@@ -39,5 +39,5 @@ class Insure:
 
 if __name__ == "__main__":
     sys.stdout = co.Logger()
-    Res = Insure().Insure()
+    Res = Synchronize_logout().Synchronize_logout()
     print(f'[{co.Execution_Time()}]-Response:\n{Res}')

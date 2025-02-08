@@ -21,11 +21,11 @@ class Synchronize_logout:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H240409001422140133604",  # 保单号
+                "PolicyRef": "H241217006239690122537",  # 保单号
                 "CancelDate": co.Time(),  # 注销申请时间
                 "RefundPremium": "0",  # 注销金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
-                "Type": "NORMAL",  # 注销类型： 正常注销 - NORMAL ，协商注销 - NEGOTIATE
+                "Type": "NEGOTIATE",  # 注销类型： 正常注销 - NORMAL ，协商注销 - NEGOTIATE
                 "ReasonRemark": "测试单,注销",  # 注销原因
             },
             "ChannelCode": self.ChannelCode,

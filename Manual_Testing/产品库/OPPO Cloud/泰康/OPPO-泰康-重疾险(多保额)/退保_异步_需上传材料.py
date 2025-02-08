@@ -21,11 +21,11 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H240123000361710106294",  # 保单号
+                "PolicyRef": "H240820002768140146341",  # 保单号
                 "CancelDate": co.Time(),  # 退保申请时间
-                "RefundPremium": "0.00",  # 退保金额（不一定等于实际退费金额）
+                "RefundPremium": "38.20",  # 退保金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
-                "Type": "NORMAL",  # 退保类型： 正常退保 - NORMAL ，协商退保 - NEGOTIATE
+                "Type": "NEGOTIATE",  # 退保类型： 正常退保 - NORMAL ，协商退保 - NEGOTIATE
                 "ReasonRemark": "测试单,退保",  # 退保原因
                 "MaterialList": [
                     {

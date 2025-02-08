@@ -53,7 +53,7 @@ class One_order:
                     "PolicyHolderName": "深圳市欢太数字科技有限公司",  # 用户姓名（企业、公司名称）
                     "PolicyHolderSex": None,  # 性别（0女，1男，2其它）
                     "PHIdType": "09",  # 证件类型01身份证,02户口簿,03护照,04军官证,05驾驶执照,06港澳返乡证,07台胞证,08出生证,09统一社会信用代码,10纳税人识别号,11其他)
-                    "PHIdNumber": "91440300MA5FBC2T2F",  # 证件号
+                    "PHIdNumber": "63884264YF2YTN9TW4",  # 证件号
                     "PHTelephone": co.Mobilephone(),  # 手机号（投保人类型为2-企业时非必填）
                     "PHBirthDate": None,  # 出生日期 （投保人类型为2-企业时非必填）
                     "PHEmail": co.Mailbox(),  # 邮箱
@@ -73,7 +73,7 @@ class One_order:
                         "Mobile": None,  # 手机号
                         "BirthDate": co.Birthday(co.newIdNum(1998, 1, 7)),  # 出生日期
                         "Email": co.Mailbox(),  # 邮箱
-                        "ResideAddress": "釜山市",  # 详细地址
+                        "ResideAddress": "天津",  # 详细地址
                         "PolicyholderInsuredRelation": "22",  # 被保人与投保人关系(01本人,02配偶,07儿女,08父母,22其他) 投保类型为2时不传
                         "SocialSecurityFlag": None,  # 有无社保,健康险必传，意外险非必传 投保类型为2时不传   (0无1有)
                         "UnderwritingType": None,  # 智能核保问卷告知 支持智能核保产品必传0-全无 1-部分是

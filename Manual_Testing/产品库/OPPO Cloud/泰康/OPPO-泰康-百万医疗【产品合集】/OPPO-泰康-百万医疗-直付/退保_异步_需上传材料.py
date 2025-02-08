@@ -21,7 +21,7 @@ class Synchronous_surrender:
         request_url = self.host + url
         body = {
             "Data": {
-                "PolicyRef": "H231218427186880108292",  # 保单号
+                "PolicyRef": "H240726002539580109382",  # 保单号
                 "CancelDate": co.Time(),  # 退保申请时间
                 "RefundPremium": "175.20",  # 退保金额（不一定等于实际退费金额）
                 "Currency": "CNY",  # 币种
